@@ -1,0 +1,932 @@
+Year*,Jurisdiction,Type,Stream,Fate,Tonnes
+2018,ACT,Undefined Plastic (Category),C&D,Landfill,"1,067"
+2018,ACT,Undefined Plastic (Category),C&D,Recycling,80
+2018,ACT,Undefined Plastic (Category),C&I,Landfill,"7,605"
+2018,ACT,Undefined Plastic (Category),C&I,Recycling,269
+2018,ACT,Undefined Plastic (Category),MSW,Landfill,"13,678"
+2018,ACT,Undefined Plastic (Category),MSW,Recycling,"4,214"
+2018,ACT,Undefined Plastic (Category),Total,Landfill,"22,350"
+2018,ACT,Undefined Plastic (Category),Total,Recycling,"4,564"
+2018,NSW,Undefined Plastic (Category),C&D,Landfill,"11,091"
+2018,NSW,Undefined Plastic (Category),C&D,Recycling,"4,122"
+2018,NSW,Undefined Plastic (Category),C&I,Energy from waste facility,"30,976"
+2018,NSW,Undefined Plastic (Category),C&I,Landfill,"296,533"
+2018,NSW,Undefined Plastic (Category),C&I,Recycling,"12,371"
+2018,NSW,Undefined Plastic (Category),MSW,Energy from waste facility,"30,976"
+2018,NSW,Undefined Plastic (Category),MSW,Landfill,"252,852"
+2018,NSW,Undefined Plastic (Category),MSW,Recycling,"70,539"
+2018,NSW,Undefined Plastic (Category),Total,Energy from waste facility,"61,951"
+2018,NSW,Undefined Plastic (Category),Total,Landfill,"560,476"
+2018,NSW,Undefined Plastic (Category),Total,Recycling,"87,032"
+2018,NT,High density polyethylene (HDPE),MSW,Recycling,33
+2018,NT,High density polyethylene (HDPE),Total,Recycling,33
+2018,NT,Polyethylene terephthalate (PET),MSW,Recycling,579
+2018,NT,Polyethylene terephthalate (PET),Total,Recycling,579
+2018,NT,Polyvinyl chloride (PVC),C&I,Recycling,156
+2018,NT,Polyvinyl chloride (PVC),MSW,Recycling,863
+2018,NT,Polyvinyl chloride (PVC),Total,Recycling,"1,020"
+2018,NT,Undefined Plastic (Category),C&D,Landfill,"2,450"
+2018,NT,Undefined Plastic (Category),C&I,Landfill,"8,757"
+2018,NT,Undefined Plastic (Category),C&I,Recycling,156
+2018,NT,Undefined Plastic (Category),MSW,Landfill,"20,418"
+2018,NT,Undefined Plastic (Category),MSW,Recycling,863
+2018,NT,Undefined Plastic (Category),Total,Landfill,"31,625"
+2018,NT,Undefined Plastic (Category),Total,Recycling,"1,020"
+2018,Qld,High density polyethylene (HDPE),C&D,Recycling,"3,039"
+2018,Qld,High density polyethylene (HDPE),C&I,Recycling,"6,077"
+2018,Qld,High density polyethylene (HDPE),MSW,Recycling,"6,077"
+2018,Qld,High density polyethylene (HDPE),Total,Recycling,"15,193"
+2018,Qld,Low density polyethylene (LDPE),C&I,Recycling,"10,542"
+2018,Qld,Low density polyethylene (LDPE),Total,Recycling,"10,542"
+2018,Qld,Other plastics,C&D,Recycling,"1,955"
+2018,Qld,Other plastics,C&I,Recycling,"5,655"
+2018,Qld,Other plastics,MSW,Recycling,"1,955"
+2018,Qld,Other plastics,Total,Recycling,"9,565"
+2018,Qld,Polyethylene terephthalate (PET),MSW,Recycling,"7,513"
+2018,Qld,Polyethylene terephthalate (PET),Total,Recycling,"7,513"
+2018,Qld,Polypropylene (PP),C&I,Recycling,"4,285"
+2018,Qld,Polypropylene (PP),Total,Recycling,"4,285"
+2018,Qld,Polystyrene (PS),C&I,Recycling,401
+2018,Qld,Polystyrene (PS),Total,Recycling,401
+2018,Qld,Polyvinyl chloride (PVC),C&I,Recycling,32
+2018,Qld,Polyvinyl chloride (PVC),Total,Recycling,32
+2018,Qld,Undefined Plastic (Category),C&D,Landfill,"24,970"
+2018,Qld,Undefined Plastic (Category),C&D,Recycling,"4,994"
+2018,Qld,Undefined Plastic (Category),C&I,Landfill,"308,422"
+2018,Qld,Undefined Plastic (Category),C&I,Recycling,"26,992"
+2018,Qld,Undefined Plastic (Category),MSW,Landfill,"261,601"
+2018,Qld,Undefined Plastic (Category),MSW,Recycling,"15,545"
+2018,Qld,Undefined Plastic (Category),Total,Landfill,"594,994"
+2018,Qld,Undefined Plastic (Category),Total,Recycling,"47,531"
+2018,SA,High density polyethylene (HDPE),C&I,Recycling,"2,315"
+2018,SA,High density polyethylene (HDPE),MSW,Recycling,"3,622"
+2018,SA,High density polyethylene (HDPE),Total,Recycling,"5,937"
+2018,SA,Low density polyethylene (LDPE),C&I,Recycling,"1,999"
+2018,SA,Low density polyethylene (LDPE),Total,Recycling,"1,999"
+2018,SA,Other plastics,C&D,Recycling,87
+2018,SA,Other plastics,C&I,Recycling,47
+2018,SA,Other plastics,MSW,Recycling,"3,990"
+2018,SA,Other plastics,Total,Recycling,"4,124"
+2018,SA,Polyethylene terephthalate (PET),C&I,Recycling,"1,967"
+2018,SA,Polyethylene terephthalate (PET),MSW,Recycling,"2,950"
+2018,SA,Polyethylene terephthalate (PET),Total,Recycling,"4,917"
+2018,SA,Polypropylene (PP),C&I,Recycling,421
+2018,SA,Polypropylene (PP),MSW,Recycling,227
+2018,SA,Polypropylene (PP),Total,Recycling,648
+2018,SA,Polystyrene (PS),C&D,Recycling,93
+2018,SA,Polystyrene (PS),C&I,Recycling,449
+2018,SA,Polystyrene (PS),MSW,Recycling,11
+2018,SA,Polystyrene (PS),Total,Recycling,552
+2018,SA,Polyvinyl chloride (PVC),C&I,Recycling,72
+2018,SA,Polyvinyl chloride (PVC),MSW,Recycling,3
+2018,SA,Polyvinyl chloride (PVC),Total,Recycling,75
+2018,SA,Undefined Plastic (Category),C&D,Landfill,"3,714"
+2018,SA,Undefined Plastic (Category),C&D,Recycling,180
+2018,SA,Undefined Plastic (Category),C&I,Energy from waste facility,"5,938"
+2018,SA,Undefined Plastic (Category),C&I,Landfill,"12,301"
+2018,SA,Undefined Plastic (Category),C&I,Recycling,"7,270"
+2018,SA,Undefined Plastic (Category),MSW,Landfill,"30,669"
+2018,SA,Undefined Plastic (Category),MSW,Recycling,"10,802"
+2018,SA,Undefined Plastic (Category),Total,Energy from waste facility,"5,938"
+2018,SA,Undefined Plastic (Category),Total,Landfill,"46,684"
+2018,SA,Undefined Plastic (Category),Total,Recycling,"18,252"
+2018,Tas,Undefined Plastic (Category),C&D,Landfill,628
+2018,Tas,Undefined Plastic (Category),C&D,Recycling,19
+2018,Tas,Undefined Plastic (Category),C&I,Landfill,"42,499"
+2018,Tas,Undefined Plastic (Category),C&I,Recycling,"1,043"
+2018,Tas,Undefined Plastic (Category),MSW,Landfill,"21,946"
+2018,Tas,Undefined Plastic (Category),MSW,Recycling,"3,131"
+2018,Tas,Undefined Plastic (Category),Total,Landfill,"65,073"
+2018,Tas,Undefined Plastic (Category),Total,Recycling,"4,192"
+2018,Vic,Undefined Plastic (Category),C&D,Landfill,"18,305"
+2018,Vic,Undefined Plastic (Category),C&D,Recycling,"4,179"
+2018,Vic,Undefined Plastic (Category),C&I,Landfill,"288,260"
+2018,Vic,Undefined Plastic (Category),C&I,Recycling,"59,610"
+2018,Vic,Undefined Plastic (Category),MSW,Landfill,"222,931"
+2018,Vic,Undefined Plastic (Category),MSW,Recycling,"78,727"
+2018,Vic,Undefined Plastic (Category),Total,Landfill,"529,495"
+2018,Vic,Undefined Plastic (Category),Total,Recycling,"142,517"
+2018,WA,High density polyethylene (HDPE),C&D,Recycling,"1,510"
+2018,WA,High density polyethylene (HDPE),C&I,Recycling,"2,232"
+2018,WA,High density polyethylene (HDPE),MSW,Recycling,"4,318"
+2018,WA,High density polyethylene (HDPE),Total,Recycling,"8,061"
+2018,WA,Low density polyethylene (LDPE),C&I,Recycling,"1,634"
+2018,WA,Low density polyethylene (LDPE),MSW,Recycling,103
+2018,WA,Low density polyethylene (LDPE),Total,Recycling,"1,737"
+2018,WA,Other plastics,C&D,Recycling,72
+2018,WA,Other plastics,C&I,Recycling,"2,785"
+2018,WA,Other plastics,MSW,Recycling,375
+2018,WA,Other plastics,Total,Recycling,"3,232"
+2018,WA,Polyethylene terephthalate (PET),C&I,Recycling,412
+2018,WA,Polyethylene terephthalate (PET),MSW,Recycling,"3,158"
+2018,WA,Polyethylene terephthalate (PET),Total,Recycling,"3,570"
+2018,WA,Polypropylene (PP),C&I,Recycling,605
+2018,WA,Polypropylene (PP),MSW,Recycling,"1,764"
+2018,WA,Polypropylene (PP),Total,Recycling,"2,369"
+2018,WA,Polystyrene (PS),C&I,Recycling,519
+2018,WA,Polystyrene (PS),MSW,Recycling,239
+2018,WA,Polystyrene (PS),Total,Recycling,758
+2018,WA,Polyvinyl chloride (PVC),C&D,Recycling,17
+2018,WA,Polyvinyl chloride (PVC),MSW,Recycling,212
+2018,WA,Polyvinyl chloride (PVC),Total,Recycling,229
+2018,WA,Undefined Plastic (Category),C&D,Landfill,"6,002"
+2018,WA,Undefined Plastic (Category),C&D,Recycling,"1,600"
+2018,WA,Undefined Plastic (Category),C&I,Landfill,"141,756"
+2018,WA,Undefined Plastic (Category),C&I,Recycling,"8,188"
+2018,WA,Undefined Plastic (Category),MSW,Landfill,"146,067"
+2018,WA,Undefined Plastic (Category),MSW,Recycling,"10,169"
+2018,WA,Undefined Plastic (Category),Total,Landfill,"293,825"
+2018,WA,Undefined Plastic (Category),Total,Recycling,"19,957"
+2017,ACT,Undefined Plastic (Category),C&D,Landfill,588
+2017,ACT,Undefined Plastic (Category),C&I,Landfill,"8,635"
+2017,ACT,Undefined Plastic (Category),C&I,Recycling,"1,501"
+2017,ACT,Undefined Plastic (Category),MSW,Landfill,"13,562"
+2017,ACT,Undefined Plastic (Category),MSW,Recycling,"2,011"
+2017,ACT,Undefined Plastic (Category),Total,Landfill,"22,784"
+2017,ACT,Undefined Plastic (Category),Total,Recycling,"3,512"
+2017,NSW,Undefined Plastic (Category),C&D,Landfill,"14,028"
+2017,NSW,Undefined Plastic (Category),C&D,Recycling,"1,498"
+2017,NSW,Undefined Plastic (Category),C&I,Landfill,"297,955"
+2017,NSW,Undefined Plastic (Category),C&I,Recycling,"33,778"
+2017,NSW,Undefined Plastic (Category),MSW,Landfill,"250,515"
+2017,NSW,Undefined Plastic (Category),MSW,Recycling,"49,266"
+2017,NSW,Undefined Plastic (Category),Total,Landfill,"562,498"
+2017,NSW,Undefined Plastic (Category),Total,Recycling,"84,541"
+2017,NT,High density polyethylene (HDPE),MSW,Recycling,32
+2017,NT,High density polyethylene (HDPE),Total,Recycling,32
+2017,NT,Polyethylene terephthalate (PET),MSW,Recycling,594
+2017,NT,Polyethylene terephthalate (PET),Total,Recycling,594
+2017,NT,Undefined Plastic (Category),C&D,Landfill,"2,428"
+2017,NT,Undefined Plastic (Category),C&I,Landfill,"8,680"
+2017,NT,Undefined Plastic (Category),MSW,Landfill,"20,237"
+2017,NT,Undefined Plastic (Category),MSW,Recycling,626
+2017,NT,Undefined Plastic (Category),Total,Landfill,"31,345"
+2017,NT,Undefined Plastic (Category),Total,Recycling,626
+2017,Qld,Undefined Plastic (Category),C&D,Landfill,"35,154"
+2017,Qld,Undefined Plastic (Category),C&D,Recycling,"2,222"
+2017,Qld,Undefined Plastic (Category),C&I,Landfill,"294,730"
+2017,Qld,Undefined Plastic (Category),C&I,Recycling,"33,559"
+2017,Qld,Undefined Plastic (Category),MSW,Landfill,"260,853"
+2017,Qld,Undefined Plastic (Category),MSW,Recycling,"13,739"
+2017,Qld,Undefined Plastic (Category),Total,Landfill,"590,737"
+2017,Qld,Undefined Plastic (Category),Total,Recycling,"49,519"
+2017,SA,High density polyethylene (HDPE),C&I,Recycling,2204
+2017,SA,High density polyethylene (HDPE),MSW,Recycling,3917
+2017,SA,High density polyethylene (HDPE),Total,Recycling,6121
+2017,SA,Low density polyethylene (LDPE),C&I,Recycling,3237
+2017,SA,Low density polyethylene (LDPE),Total,Recycling,3237
+2017,SA,Other plastics,C&D,Recycling,3331
+2017,SA,Other plastics,C&I,Recycling,699
+2017,SA,Other plastics,MSW,Recycling,6144
+2017,SA,Other plastics,Total,Recycling,10174
+2017,SA,Polyethylene terephthalate (PET),C&I,Recycling,1816
+2017,SA,Polyethylene terephthalate (PET),MSW,Recycling,2963
+2017,SA,Polyethylene terephthalate (PET),Total,Recycling,4779
+2017,SA,Polypropylene (PP),C&I,Recycling,585
+2017,SA,Polypropylene (PP),MSW,Recycling,228
+2017,SA,Polypropylene (PP),Total,Recycling,813
+2017,SA,Polystyrene (PS),C&D,Recycling,90
+2017,SA,Polystyrene (PS),C&I,Recycling,226
+2017,SA,Polystyrene (PS),MSW,Recycling,13
+2017,SA,Polystyrene (PS),Total,Recycling,330
+2017,SA,Polyvinyl chloride (PVC),C&I,Recycling,60
+2017,SA,Polyvinyl chloride (PVC),Total,Recycling,60
+2017,SA,Undefined Plastic (Category),C&D,Landfill,3170
+2017,SA,Undefined Plastic (Category),C&D,Recycling,3421
+2017,SA,Undefined Plastic (Category),C&I,Energy from waste facility,4185
+2017,SA,Undefined Plastic (Category),C&I,Landfill,19314
+2017,SA,Undefined Plastic (Category),C&I,Recycling,8827
+2017,SA,Undefined Plastic (Category),MSW,Landfill,30858
+2017,SA,Undefined Plastic (Category),MSW,Recycling,13265
+2017,SA,Undefined Plastic (Category),Total,Energy from waste facility,4185
+2017,SA,Undefined Plastic (Category),Total,Landfill,53342
+2017,SA,Undefined Plastic (Category),Total,Recycling,25514
+2017,Tas,Undefined Plastic (Category),C&D,Landfill,566
+2017,Tas,Undefined Plastic (Category),C&D,Recycling,19
+2017,Tas,Undefined Plastic (Category),C&I,Landfill,"44,598"
+2017,Tas,Undefined Plastic (Category),C&I,Recycling,"2,290"
+2017,Tas,Undefined Plastic (Category),MSW,Landfill,"26,156"
+2017,Tas,Undefined Plastic (Category),MSW,Recycling,453
+2017,Tas,Undefined Plastic (Category),Total,Landfill,"71,319"
+2017,Tas,Undefined Plastic (Category),Total,Recycling,"2,761"
+2017,Vic,Undefined Plastic (Category),C&D,Landfill,"17,260"
+2017,Vic,Undefined Plastic (Category),C&D,Recycling,"1,981"
+2017,Vic,Undefined Plastic (Category),C&I,Landfill,"271,881"
+2017,Vic,Undefined Plastic (Category),C&I,Recycling,"55,980"
+2017,Vic,Undefined Plastic (Category),MSW,Landfill,"227,907"
+2017,Vic,Undefined Plastic (Category),MSW,Recycling,"79,207"
+2017,Vic,Undefined Plastic (Category),Total,Landfill,"517,049"
+2017,Vic,Undefined Plastic (Category),Total,Recycling,"137,167"
+2017,WA,High density polyethylene (HDPE),C&D,Recycling,"1,515"
+2017,WA,High density polyethylene (HDPE),C&I,Recycling,263
+2017,WA,High density polyethylene (HDPE),MSW,Recycling,"3,758"
+2017,WA,High density polyethylene (HDPE),Total,Recycling,"5,536"
+2017,WA,Low density polyethylene (LDPE),C&I,Recycling,479
+2017,WA,Low density polyethylene (LDPE),Total,Recycling,479
+2017,WA,Other plastics,C&D,Recycling,73
+2017,WA,Other plastics,C&I,Recycling,"3,210"
+2017,WA,Other plastics,MSW,Recycling,134
+2017,WA,Other plastics,Total,Recycling,"3,417"
+2017,WA,Polyethylene terephthalate (PET),C&I,Recycling,"1,595"
+2017,WA,Polyethylene terephthalate (PET),MSW,Recycling,"3,502"
+2017,WA,Polyethylene terephthalate (PET),Total,Recycling,"5,097"
+2017,WA,Polypropylene (PP),C&I,Recycling,572
+2017,WA,Polypropylene (PP),MSW,Recycling,"1,425"
+2017,WA,Polypropylene (PP),Total,Recycling,"1,997"
+2017,WA,Polystyrene (PS),C&I,Recycling,305
+2017,WA,Polystyrene (PS),MSW,Recycling,168
+2017,WA,Polystyrene (PS),Total,Recycling,473
+2017,WA,Polyvinyl chloride (PVC),MSW,Recycling,121
+2017,WA,Polyvinyl chloride (PVC),Total,Recycling,121
+2017,WA,Undefined Plastic (Category),C&D,Landfill,"6,202"
+2017,WA,Undefined Plastic (Category),C&D,Recycling,"1,588"
+2017,WA,Undefined Plastic (Category),C&I,Landfill,"153,010"
+2017,WA,Undefined Plastic (Category),C&I,Recycling,"6,424"
+2017,WA,Undefined Plastic (Category),MSW,Landfill,"150,736"
+2017,WA,Undefined Plastic (Category),MSW,Recycling,"9,108"
+2017,WA,Undefined Plastic (Category),Total,Landfill,"309,949"
+2017,WA,Undefined Plastic (Category),Total,Recycling,"17,120"
+2016,ACT,Undefined Plastic (Category),C&D,Landfill,"2,931"
+2016,ACT,Undefined Plastic (Category),C&I,Landfill,"7,712"
+2016,ACT,Undefined Plastic (Category),C&I,Recycling,300
+2016,ACT,Undefined Plastic (Category),MSW,Landfill,"13,580"
+2016,ACT,Undefined Plastic (Category),MSW,Recycling,"1,600"
+2016,ACT,Undefined Plastic (Category),Total,Landfill,"24,223"
+2016,ACT,Undefined Plastic (Category),Total,Recycling,"1,900"
+2016,NSW,Undefined Plastic (Category),C&D,Landfill,"16,505"
+2016,NSW,Undefined Plastic (Category),C&D,Recycling,"1,800"
+2016,NSW,Undefined Plastic (Category),C&I,Landfill,"477,934"
+2016,NSW,Undefined Plastic (Category),C&I,Recycling,"38,000"
+2016,NSW,Undefined Plastic (Category),MSW,Landfill,"238,415"
+2016,NSW,Undefined Plastic (Category),MSW,Recycling,"48,300"
+2016,NSW,Undefined Plastic (Category),Total,Landfill,"732,853"
+2016,NSW,Undefined Plastic (Category),Total,Recycling,"88,100"
+2016,NT,High density polyethylene (HDPE),MSW,Recycling,87
+2016,NT,High density polyethylene (HDPE),Total,Recycling,87
+2016,NT,Polyethylene terephthalate (PET),MSW,Recycling,507
+2016,NT,Polyethylene terephthalate (PET),Total,Recycling,507
+2016,NT,Undefined Plastic (Category),C&D,Landfill,"4,254"
+2016,NT,Undefined Plastic (Category),C&I,Landfill,"7,646"
+2016,NT,Undefined Plastic (Category),MSW,Landfill,"21,972"
+2016,NT,Undefined Plastic (Category),MSW,Recycling,594
+2016,NT,Undefined Plastic (Category),Total,Landfill,"33,872"
+2016,NT,Undefined Plastic (Category),Total,Recycling,594
+2016,Qld,Undefined Plastic (Category),C&D,Landfill,"48,653"
+2016,Qld,Undefined Plastic (Category),C&I,Landfill,"253,175"
+2016,Qld,Undefined Plastic (Category),MSW,Landfill,"301,691"
+2016,Qld,Undefined Plastic (Category),Total,Landfill,"603,520"
+2016,Qld,Undefined Plastic (Category),Total,Recycling,"41,383"
+2016,SA,High density polyethylene (HDPE),C&D,Recycling,135
+2016,SA,High density polyethylene (HDPE),C&I,Recycling,1710
+2016,SA,High density polyethylene (HDPE),MSW,Recycling,2610
+2016,SA,High density polyethylene (HDPE),Total,Recycling,4455
+2016,SA,Low density polyethylene (LDPE),C&I,Recycling,3690
+2016,SA,Low density polyethylene (LDPE),MSW,Recycling,410
+2016,SA,Low density polyethylene (LDPE),Total,Recycling,4100
+2016,SA,Other plastics,C&D,Recycling,3780
+2016,SA,Other plastics,C&I,Recycling,5320
+2016,SA,Other plastics,MSW,Recycling,4900
+2016,SA,Other plastics,Total,Recycling,14000
+2016,SA,Polyethylene terephthalate (PET),C&I,Recycling,1470
+2016,SA,Polyethylene terephthalate (PET),MSW,Recycling,2730
+2016,SA,Polyethylene terephthalate (PET),Total,Recycling,4200
+2016,SA,Polypropylene (PP),C&D,Recycling,42
+2016,SA,Polypropylene (PP),C&I,Recycling,1330
+2016,SA,Polypropylene (PP),MSW,Recycling,42
+2016,SA,Polypropylene (PP),Total,Recycling,1414
+2016,SA,Polystyrene (PS),C&D,Recycling,114
+2016,SA,Polystyrene (PS),C&I,Recycling,183
+2016,SA,Polystyrene (PS),MSW,Recycling,3
+2016,SA,Polystyrene (PS),Total,Recycling,300
+2016,SA,Polyvinyl chloride (PVC),C&I,Recycling,10
+2016,SA,Polyvinyl chloride (PVC),Total,Recycling,10
+2016,SA,Undefined Plastic (Category),C&D,Landfill,3415
+2016,SA,Undefined Plastic (Category),C&D,Recycling,4071
+2016,SA,Undefined Plastic (Category),C&I,Energy from waste facility,28470
+2016,SA,Undefined Plastic (Category),C&I,Landfill,12216
+2016,SA,Undefined Plastic (Category),C&I,Recycling,13713
+2016,SA,Undefined Plastic (Category),MSW,Landfill,31774
+2016,SA,Undefined Plastic (Category),MSW,Recycling,10695
+2016,SA,Undefined Plastic (Category),Total,Energy from waste facility,28470
+2016,SA,Undefined Plastic (Category),Total,Landfill,47404
+2016,SA,Undefined Plastic (Category),Total,Recycling,28479
+2016,Tas,Undefined Plastic (Category),C&D,Landfill,802
+2016,Tas,Undefined Plastic (Category),C&D,Recycling,600
+2016,Tas,Undefined Plastic (Category),C&I,Landfill,"37,763"
+2016,Tas,Undefined Plastic (Category),C&I,Recycling,800
+2016,Tas,Undefined Plastic (Category),MSW,Landfill,"29,020"
+2016,Tas,Undefined Plastic (Category),MSW,Recycling,500
+2016,Tas,Undefined Plastic (Category),Total,Landfill,"67,585"
+2016,Tas,Undefined Plastic (Category),Total,Recycling,"1,900"
+2016,Vic,Undefined Plastic (Category),C&D,Landfill,"18,447"
+2016,Vic,Undefined Plastic (Category),C&D,Recycling,"2,795"
+2016,Vic,Undefined Plastic (Category),C&I,Landfill,"248,414"
+2016,Vic,Undefined Plastic (Category),C&I,Recycling,"57,340"
+2016,Vic,Undefined Plastic (Category),MSW,Landfill,"219,595"
+2016,Vic,Undefined Plastic (Category),MSW,Recycling,"70,560"
+2016,Vic,Undefined Plastic (Category),Total,Landfill,"486,457"
+2016,Vic,Undefined Plastic (Category),Total,Recycling,"130,695"
+2016,WA,High density polyethylene (HDPE),C&I,Recycling,"1,214"
+2016,WA,High density polyethylene (HDPE),MSW,Recycling,"3,284"
+2016,WA,High density polyethylene (HDPE),Total,Recycling,"4,498"
+2016,WA,Low density polyethylene (LDPE),C&I,Recycling,377
+2016,WA,Low density polyethylene (LDPE),Total,Recycling,377
+2016,WA,Other plastics,C&I,Recycling,"2,056"
+2016,WA,Other plastics,Total,Recycling,"2,056"
+2016,WA,Polyethylene terephthalate (PET),MSW,Recycling,"3,773"
+2016,WA,Polyethylene terephthalate (PET),Total,Recycling,"3,773"
+2016,WA,Polypropylene (PP),C&I,Recycling,994
+2016,WA,Polypropylene (PP),MSW,Recycling,781
+2016,WA,Polypropylene (PP),Total,Recycling,"1,775"
+2016,WA,Polystyrene (PS),C&I,Recycling,301
+2016,WA,Polystyrene (PS),MSW,Recycling,200
+2016,WA,Polystyrene (PS),Total,Recycling,501
+2016,WA,Polyvinyl chloride (PVC),MSW,Recycling,117
+2016,WA,Polyvinyl chloride (PVC),Total,Recycling,117
+2016,WA,Undefined Plastic (Category),C&D,Landfill,"11,397"
+2016,WA,Undefined Plastic (Category),C&I,Landfill,"135,179"
+2016,WA,Undefined Plastic (Category),C&I,Recycling,"4,942"
+2016,WA,Undefined Plastic (Category),MSW,Landfill,"181,003"
+2016,WA,Undefined Plastic (Category),MSW,Recycling,"8,155"
+2016,WA,Undefined Plastic (Category),Total,Landfill,"327,579"
+2016,WA,Undefined Plastic (Category),Total,Recycling,"13,097"
+2015,ACT,Other plastics,MSW,Landfill,"13,316"
+2015,ACT,Other plastics,Total,Landfill,"13,316"
+2015,ACT,Undefined Plastic (Category),C&D,Landfill,427
+2015,ACT,Undefined Plastic (Category),C&I,Landfill,"7,784"
+2015,ACT,Undefined Plastic (Category),C&I,Recycling,400
+2015,ACT,Undefined Plastic (Category),MSW,Landfill,"13,316"
+2015,ACT,Undefined Plastic (Category),MSW,Recycling,"2,500"
+2015,ACT,Undefined Plastic (Category),Total,Landfill,"21,526"
+2015,ACT,Undefined Plastic (Category),Total,Recycling,"2,900"
+2015,NSW,Undefined Plastic (Category),C&D,Landfill,"18,287"
+2015,NSW,Undefined Plastic (Category),C&D,Recycling,"1,800"
+2015,NSW,Undefined Plastic (Category),C&I,Landfill,"452,600"
+2015,NSW,Undefined Plastic (Category),C&I,Recycling,"41,200"
+2015,NSW,Undefined Plastic (Category),MSW,Landfill,"223,298"
+2015,NSW,Undefined Plastic (Category),MSW,Recycling,"51,600"
+2015,NSW,Undefined Plastic (Category),Total,Landfill,"694,185"
+2015,NSW,Undefined Plastic (Category),Total,Recycling,"94,600"
+2015,NT,High density polyethylene (HDPE),MSW,Recycling,121
+2015,NT,High density polyethylene (HDPE),Total,Recycling,121
+2015,NT,Polyethylene terephthalate (PET),MSW,Recycling,585
+2015,NT,Polyethylene terephthalate (PET),Total,Recycling,585
+2015,NT,Polyvinyl chloride (PVC),MSW,Recycling,1
+2015,NT,Polyvinyl chloride (PVC),Total,Recycling,1
+2015,NT,Undefined Plastic (Category),C&D,Landfill,"3,749"
+2015,NT,Undefined Plastic (Category),C&I,Landfill,"6,739"
+2015,NT,Undefined Plastic (Category),MSW,Landfill,"19,366"
+2015,NT,Undefined Plastic (Category),MSW,Recycling,707
+2015,NT,Undefined Plastic (Category),Total,Landfill,"29,854"
+2015,NT,Undefined Plastic (Category),Total,Recycling,707
+2015,Qld,Undefined Plastic (Category),C&D,Landfill,"44,921"
+2015,Qld,Undefined Plastic (Category),C&I,Landfill,"261,824"
+2015,Qld,Undefined Plastic (Category),MSW,Landfill,"286,998"
+2015,Qld,Undefined Plastic (Category),Total,Landfill,"593,742"
+2015,Qld,Undefined Plastic (Category),Total,Recycling,"44,628"
+2015,SA,High density polyethylene (HDPE),C&D,Recycling,154
+2015,SA,High density polyethylene (HDPE),C&I,Recycling,"2,035"
+2015,SA,High density polyethylene (HDPE),MSW,Recycling,"2,611"
+2015,SA,High density polyethylene (HDPE),Total,Recycling,"4,800"
+2015,SA,Low density polyethylene (LDPE),C&I,Recycling,"3,663"
+2015,SA,Low density polyethylene (LDPE),MSW,Recycling,37
+2015,SA,Low density polyethylene (LDPE),Total,Recycling,"3,700"
+2015,SA,Other plastics,C&D,Recycling,"2,990"
+2015,SA,Other plastics,C&I,Recycling,"4,420"
+2015,SA,Other plastics,MSW,Recycling,"5,590"
+2015,SA,Other plastics,Total,Recycling,"13,000"
+2015,SA,Polyethylene terephthalate (PET),C&I,Recycling,"1,512"
+2015,SA,Polyethylene terephthalate (PET),MSW,Recycling,"2,688"
+2015,SA,Polyethylene terephthalate (PET),Total,Recycling,"4,200"
+2015,SA,Polypropylene (PP),C&D,Recycling,38
+2015,SA,Polypropylene (PP),C&I,Recycling,"1,494"
+2015,SA,Polypropylene (PP),MSW,Recycling,67
+2015,SA,Polypropylene (PP),Total,Recycling,"1,600"
+2015,SA,Polystyrene (PS),C&D,Recycling,105
+2015,SA,Polystyrene (PS),C&I,Recycling,192
+2015,SA,Polystyrene (PS),MSW,Recycling,3
+2015,SA,Polystyrene (PS),Total,Recycling,300
+2015,SA,Polyvinyl chloride (PVC),C&I,Recycling,300
+2015,SA,Polyvinyl chloride (PVC),Total,Recycling,300
+2015,SA,Undefined Plastic (Category),C&D,Landfill,"3,140"
+2015,SA,Undefined Plastic (Category),C&D,Recycling,"3,287"
+2015,SA,Undefined Plastic (Category),C&I,Energy from waste facility,"21,930"
+2015,SA,Undefined Plastic (Category),C&I,Landfill,"12,145"
+2015,SA,Undefined Plastic (Category),C&I,Recycling,"13,617"
+2015,SA,Undefined Plastic (Category),MSW,Landfill,"33,113"
+2015,SA,Undefined Plastic (Category),MSW,Recycling,"10,996"
+2015,SA,Undefined Plastic (Category),Total,Energy from waste facility,"21,930"
+2015,SA,Undefined Plastic (Category),Total,Landfill,"48,398"
+2015,SA,Undefined Plastic (Category),Total,Recycling,"27,900"
+2015,Tas,Undefined Plastic (Category),C&D,Landfill,"1,063"
+2015,Tas,Undefined Plastic (Category),C&D,Recycling,500
+2015,Tas,Undefined Plastic (Category),C&I,Landfill,"38,399"
+2015,Tas,Undefined Plastic (Category),C&I,Recycling,600
+2015,Tas,Undefined Plastic (Category),MSW,Landfill,"29,065"
+2015,Tas,Undefined Plastic (Category),MSW,Recycling,300
+2015,Tas,Undefined Plastic (Category),Total,Landfill,"68,527"
+2015,Tas,Undefined Plastic (Category),Total,Recycling,"1,400"
+2015,Vic,Undefined Plastic (Category),C&D,Landfill,"18,443"
+2015,Vic,Undefined Plastic (Category),C&D,Recycling,"2,874"
+2015,Vic,Undefined Plastic (Category),C&I,Landfill,"248,357"
+2015,Vic,Undefined Plastic (Category),C&I,Recycling,"58,106"
+2015,Vic,Undefined Plastic (Category),MSW,Landfill,"212,321"
+2015,Vic,Undefined Plastic (Category),MSW,Recycling,"89,612"
+2015,Vic,Undefined Plastic (Category),Total,Landfill,"479,121"
+2015,Vic,Undefined Plastic (Category),Total,Recycling,"150,592"
+2015,WA,High density polyethylene (HDPE),C&D,Recycling,50
+2015,WA,High density polyethylene (HDPE),C&I,Recycling,"2,830"
+2015,WA,High density polyethylene (HDPE),MSW,Recycling,"3,410"
+2015,WA,High density polyethylene (HDPE),Total,Recycling,"6,290"
+2015,WA,Low density polyethylene (LDPE),C&D,Recycling,10
+2015,WA,Low density polyethylene (LDPE),C&I,Recycling,"1,060"
+2015,WA,Low density polyethylene (LDPE),Total,Recycling,"1,070"
+2015,WA,Other plastics,C&I,Recycling,"2,070"
+2015,WA,Other plastics,MSW,Recycling,200
+2015,WA,Other plastics,Total,Recycling,"2,270"
+2015,WA,Polyethylene terephthalate (PET),MSW,Recycling,"3,350"
+2015,WA,Polyethylene terephthalate (PET),Total,Recycling,"3,350"
+2015,WA,Polypropylene (PP),C&I,Recycling,"1,160"
+2015,WA,Polypropylene (PP),MSW,Recycling,"1,200"
+2015,WA,Polypropylene (PP),Total,Recycling,"2,360"
+2015,WA,Polystyrene (PS),C&I,Recycling,470
+2015,WA,Polystyrene (PS),MSW,Recycling,200
+2015,WA,Polystyrene (PS),Total,Recycling,670
+2015,WA,Polyvinyl chloride (PVC),MSW,Recycling,110
+2015,WA,Polyvinyl chloride (PVC),Total,Recycling,110
+2015,WA,Undefined Plastic (Category),C&D,Landfill,"21,853"
+2015,WA,Undefined Plastic (Category),C&D,Recycling,60
+2015,WA,Undefined Plastic (Category),C&I,Landfill,"148,374"
+2015,WA,Undefined Plastic (Category),C&I,Recycling,"7,590"
+2015,WA,Undefined Plastic (Category),MSW,Landfill,"186,227"
+2015,WA,Undefined Plastic (Category),MSW,Recycling,"8,470"
+2015,WA,Undefined Plastic (Category),Total,Landfill,"356,454"
+2015,WA,Undefined Plastic (Category),Total,Recycling,"16,120"
+2014,ACT,Undefined Plastic (Category),C&D,Landfill,972
+2014,ACT,Undefined Plastic (Category),C&I,Landfill,"19,265"
+2014,ACT,Undefined Plastic (Category),C&I,Recycling,600
+2014,ACT,Undefined Plastic (Category),MSW,Landfill,"10,900"
+2014,ACT,Undefined Plastic (Category),MSW,Recycling,"2,100"
+2014,ACT,Undefined Plastic (Category),Total,Landfill,"31,137"
+2014,ACT,Undefined Plastic (Category),Total,Recycling,"2,700"
+2014,NSW,Undefined Plastic (Category),C&D,Landfill,"34,275"
+2014,NSW,Undefined Plastic (Category),C&D,Recycling,"1,100"
+2014,NSW,Undefined Plastic (Category),C&I,Landfill,"287,917"
+2014,NSW,Undefined Plastic (Category),C&I,Recycling,"31,700"
+2014,NSW,Undefined Plastic (Category),MSW,Landfill,"253,542"
+2014,NSW,Undefined Plastic (Category),MSW,Recycling,"58,900"
+2014,NSW,Undefined Plastic (Category),Total,Landfill,"575,733"
+2014,NSW,Undefined Plastic (Category),Total,Recycling,"91,700"
+2014,NT,High density polyethylene (HDPE),MSW,Recycling,146
+2014,NT,High density polyethylene (HDPE),Total,Recycling,146
+2014,NT,Polyethylene terephthalate (PET),MSW,Recycling,713
+2014,NT,Polyethylene terephthalate (PET),Total,Recycling,713
+2014,NT,Undefined Plastic (Category),C&D,Landfill,"5,037"
+2014,NT,Undefined Plastic (Category),C&I,Landfill,"9,042"
+2014,NT,Undefined Plastic (Category),MSW,Landfill,"25,981"
+2014,NT,Undefined Plastic (Category),MSW,Recycling,933
+2014,NT,Undefined Plastic (Category),Total,Landfill,"40,060"
+2014,NT,Undefined Plastic (Category),Total,Recycling,933
+2014,Qld,Undefined Plastic (Category),C&D,Landfill,"39,372"
+2014,Qld,Undefined Plastic (Category),C&D,Recycling,"1,200"
+2014,Qld,Undefined Plastic (Category),C&I,Landfill,"266,772"
+2014,Qld,Undefined Plastic (Category),C&I,Recycling,"17,300"
+2014,Qld,Undefined Plastic (Category),MSW,Landfill,"285,120"
+2014,Qld,Undefined Plastic (Category),MSW,Recycling,"17,500"
+2014,Qld,Undefined Plastic (Category),Total,Landfill,"591,264"
+2014,Qld,Undefined Plastic (Category),Total,Recycling,"36,000"
+2014,SA,High density polyethylene (HDPE),Total,Recycling,"4,500"
+2014,SA,Low density polyethylene (LDPE),Total,Recycling,"3,600"
+2014,SA,Other plastics,Total,Recycling,"6,400"
+2014,SA,Polyethylene terephthalate (PET),Total,Recycling,"4,400"
+2014,SA,Polypropylene (PP),Total,Recycling,"1,700"
+2014,SA,Polystyrene (PS),Total,Recycling,300
+2014,SA,Polyvinyl chloride (PVC),Total,Recycling,300
+2014,SA,Undefined Plastic (Category),C&D,Landfill,"5,344"
+2014,SA,Undefined Plastic (Category),C&I,Energy from waste facility,"16,500"
+2014,SA,Undefined Plastic (Category),C&I,Landfill,"12,511"
+2014,SA,Undefined Plastic (Category),MSW,Landfill,"16,805"
+2014,SA,Undefined Plastic (Category),Total,Energy from waste facility,"16,500"
+2014,SA,Undefined Plastic (Category),Total,Landfill,"34,660"
+2014,SA,Undefined Plastic (Category),Total,Recycling,"21,200"
+2014,Tas,Undefined Plastic (Category),C&D,Landfill,"1,086"
+2014,Tas,Undefined Plastic (Category),C&I,Landfill,"37,251"
+2014,Tas,Undefined Plastic (Category),C&I,Recycling,"2,500"
+2014,Tas,Undefined Plastic (Category),MSW,Landfill,"30,818"
+2014,Tas,Undefined Plastic (Category),MSW,Recycling,"2,359"
+2014,Tas,Undefined Plastic (Category),Total,Landfill,"69,155"
+2014,Tas,Undefined Plastic (Category),Total,Recycling,"4,859"
+2014,Vic,Undefined Plastic (Category),C&D,Landfill,"17,378"
+2014,Vic,Undefined Plastic (Category),C&D,Recycling,"1,159"
+2014,Vic,Undefined Plastic (Category),C&I,Landfill,"232,804"
+2014,Vic,Undefined Plastic (Category),C&I,Recycling,"71,978"
+2014,Vic,Undefined Plastic (Category),MSW,Landfill,"237,949"
+2014,Vic,Undefined Plastic (Category),MSW,Recycling,"87,397"
+2014,Vic,Undefined Plastic (Category),Total,Landfill,"488,132"
+2014,Vic,Undefined Plastic (Category),Total,Recycling,"160,534"
+2014,WA,High density polyethylene (HDPE),C&I,Recycling,"3,100"
+2014,WA,High density polyethylene (HDPE),MSW,Recycling,"2,900"
+2014,WA,High density polyethylene (HDPE),Total,Recycling,"6,000"
+2014,WA,Low density polyethylene (LDPE),C&I,Recycling,"2,400"
+2014,WA,Low density polyethylene (LDPE),Total,Recycling,"2,400"
+2014,WA,Other plastics,C&I,Recycling,"1,600"
+2014,WA,Other plastics,MSW,Recycling,100
+2014,WA,Other plastics,Total,Recycling,"1,700"
+2014,WA,Polyethylene terephthalate (PET),C&I,Recycling,500
+2014,WA,Polyethylene terephthalate (PET),MSW,Recycling,"2,900"
+2014,WA,Polyethylene terephthalate (PET),Total,Recycling,"3,400"
+2014,WA,Polypropylene (PP),C&I,Recycling,"1,300"
+2014,WA,Polypropylene (PP),MSW,Recycling,"1,200"
+2014,WA,Polypropylene (PP),Total,Recycling,"2,500"
+2014,WA,Polystyrene (PS),C&I,Recycling,200
+2014,WA,Polystyrene (PS),MSW,Recycling,100
+2014,WA,Polystyrene (PS),Total,Recycling,300
+2014,WA,Polyvinyl chloride (PVC),MSW,Recycling,100
+2014,WA,Polyvinyl chloride (PVC),Total,Recycling,100
+2014,WA,Undefined Plastic (Category),C&D,Landfill,"55,975"
+2014,WA,Undefined Plastic (Category),C&I,Landfill,"119,333"
+2014,WA,Undefined Plastic (Category),C&I,Recycling,"9,100"
+2014,WA,Undefined Plastic (Category),MSW,Landfill,"180,577"
+2014,WA,Undefined Plastic (Category),MSW,Recycling,"7,300"
+2014,WA,Undefined Plastic (Category),Total,Landfill,"355,885"
+2014,WA,Undefined Plastic (Category),Total,Recycling,"16,400"
+2013,ACT,Undefined Plastic (Category),C&D,Landfill,"1,114"
+2013,ACT,Undefined Plastic (Category),C&I,Landfill,"18,897"
+2013,ACT,Undefined Plastic (Category),C&I,Recycling,536
+2013,ACT,Undefined Plastic (Category),MSW,Landfill,"10,783"
+2013,ACT,Undefined Plastic (Category),MSW,Recycling,"1,464"
+2013,ACT,Undefined Plastic (Category),Total,Landfill,"30,794"
+2013,ACT,Undefined Plastic (Category),Total,Recycling,"2,000"
+2013,NSW,Undefined Plastic (Category),C&D,Landfill,"46,318"
+2013,NSW,Undefined Plastic (Category),C&D,Recycling,"1,084"
+2013,NSW,Undefined Plastic (Category),C&I,Landfill,"290,679"
+2013,NSW,Undefined Plastic (Category),C&I,Recycling,"31,253"
+2013,NSW,Undefined Plastic (Category),MSW,Landfill,"255,712"
+2013,NSW,Undefined Plastic (Category),MSW,Recycling,"58,069"
+2013,NSW,Undefined Plastic (Category),Total,Landfill,"592,709"
+2013,NSW,Undefined Plastic (Category),Total,Recycling,"90,407"
+2013,NT,High density polyethylene (HDPE),MSW,Recycling,206
+2013,NT,High density polyethylene (HDPE),Total,Recycling,206
+2013,NT,Polyethylene terephthalate (PET),MSW,Recycling,"11,588"
+2013,NT,Polyethylene terephthalate (PET),Total,Recycling,"11,588"
+2013,NT,Undefined Plastic (Category),C&D,Landfill,"5,346"
+2013,NT,Undefined Plastic (Category),C&I,Landfill,"13,027"
+2013,NT,Undefined Plastic (Category),MSW,Landfill,"30,716"
+2013,NT,Undefined Plastic (Category),MSW,Recycling,"11,827"
+2013,NT,Undefined Plastic (Category),Total,Landfill,"49,089"
+2013,NT,Undefined Plastic (Category),Total,Recycling,"11,827"
+2013,Qld,Undefined Plastic (Category),C&D,Landfill,"32,587"
+2013,Qld,Undefined Plastic (Category),C&D,Recycling,153
+2013,Qld,Undefined Plastic (Category),C&I,Landfill,"293,624"
+2013,Qld,Undefined Plastic (Category),C&I,Recycling,"20,104"
+2013,Qld,Undefined Plastic (Category),MSW,Landfill,"257,578"
+2013,Qld,Undefined Plastic (Category),MSW,Recycling,"10,343"
+2013,Qld,Undefined Plastic (Category),Total,Landfill,"583,788"
+2013,Qld,Undefined Plastic (Category),Total,Recycling,"30,600"
+2013,SA,High density polyethylene (HDPE),Total,Recycling,"3,200"
+2013,SA,Low density polyethylene (LDPE),Total,Recycling,"4,300"
+2013,SA,Other plastics,Total,Recycling,"9,000"
+2013,SA,Polyethylene terephthalate (PET),Total,Recycling,"4,200"
+2013,SA,Polypropylene (PP),Total,Recycling,"2,000"
+2013,SA,Polystyrene (PS),Total,Recycling,410
+2013,SA,Polyvinyl chloride (PVC),Total,Recycling,300
+2013,SA,Undefined Plastic (Category),C&D,Landfill,"7,555"
+2013,SA,Undefined Plastic (Category),C&I,Energy from waste facility,"7,590"
+2013,SA,Undefined Plastic (Category),C&I,Landfill,"17,685"
+2013,SA,Undefined Plastic (Category),MSW,Landfill,"23,755"
+2013,SA,Undefined Plastic (Category),Total,Energy from waste facility,"7,590"
+2013,SA,Undefined Plastic (Category),Total,Landfill,"48,995"
+2013,SA,Undefined Plastic (Category),Total,Recycling,"23,410"
+2013,Tas,Undefined Plastic (Category),C&D,Landfill,738
+2013,Tas,Undefined Plastic (Category),C&I,Landfill,"40,679"
+2013,Tas,Undefined Plastic (Category),C&I,Recycling,"2,843"
+2013,Tas,Undefined Plastic (Category),MSW,Landfill,"26,136"
+2013,Tas,Undefined Plastic (Category),MSW,Recycling,"1,057"
+2013,Tas,Undefined Plastic (Category),Total,Landfill,"67,553"
+2013,Tas,Undefined Plastic (Category),Total,Recycling,"3,900"
+2013,Vic,Undefined Plastic (Category),C&D,Landfill,"16,946"
+2013,Vic,Undefined Plastic (Category),C&D,Recycling,839
+2013,Vic,Undefined Plastic (Category),C&I,Landfill,"227,015"
+2013,Vic,Undefined Plastic (Category),C&I,Recycling,"82,046"
+2013,Vic,Undefined Plastic (Category),MSW,Landfill,"231,496"
+2013,Vic,Undefined Plastic (Category),MSW,Recycling,"67,668"
+2013,Vic,Undefined Plastic (Category),Total,Landfill,"475,457"
+2013,Vic,Undefined Plastic (Category),Total,Recycling,"150,553"
+2013,WA,High density polyethylene (HDPE),C&I,Recycling,"2,750"
+2013,WA,High density polyethylene (HDPE),MSW,Recycling,"2,750"
+2013,WA,High density polyethylene (HDPE),Total,Recycling,"5,500"
+2013,WA,Low density polyethylene (LDPE),C&I,Recycling,"2,100"
+2013,WA,Low density polyethylene (LDPE),Total,Recycling,"2,100"
+2013,WA,Other plastics,C&I,Recycling,300
+2013,WA,Other plastics,MSW,Recycling,400
+2013,WA,Other plastics,Total,Recycling,700
+2013,WA,Polyethylene terephthalate (PET),C&I,Recycling,500
+2013,WA,Polyethylene terephthalate (PET),MSW,Recycling,"2,000"
+2013,WA,Polyethylene terephthalate (PET),Total,Recycling,"2,500"
+2013,WA,Polypropylene (PP),C&I,Recycling,500
+2013,WA,Polypropylene (PP),MSW,Recycling,"1,200"
+2013,WA,Polypropylene (PP),Total,Recycling,"1,700"
+2013,WA,Polystyrene (PS),MSW,Recycling,300
+2013,WA,Polystyrene (PS),Total,Recycling,300
+2013,WA,Polyvinyl chloride (PVC),MSW,Recycling,400
+2013,WA,Polyvinyl chloride (PVC),Total,Recycling,400
+2013,WA,Undefined Plastic (Category),C&D,Landfill,"19,994"
+2013,WA,Undefined Plastic (Category),C&I,Landfill,"191,802"
+2013,WA,Undefined Plastic (Category),C&I,Recycling,"6,150"
+2013,WA,Undefined Plastic (Category),MSW,Landfill,"162,174"
+2013,WA,Undefined Plastic (Category),MSW,Recycling,"7,050"
+2013,WA,Undefined Plastic (Category),Total,Landfill,"373,969"
+2013,WA,Undefined Plastic (Category),Total,Recycling,"13,200"
+2010,ACT,Undefined Plastic (Category),C&D,Landfill,"2,647"
+2010,ACT,Undefined Plastic (Category),C&I,Landfill,"19,586"
+2010,ACT,Undefined Plastic (Category),C&I,Recycling,745
+2010,ACT,Undefined Plastic (Category),MSW,Landfill,"8,165"
+2010,ACT,Undefined Plastic (Category),MSW,Recycling,"1,329"
+2010,ACT,Undefined Plastic (Category),Total,Landfill,"30,398"
+2010,ACT,Undefined Plastic (Category),Total,Recycling,"2,074"
+2010,NSW,Undefined Plastic (Category),C&D,Landfill,"24,781"
+2010,NSW,Undefined Plastic (Category),C&I,Landfill,"445,028"
+2010,NSW,Undefined Plastic (Category),C&I,Recycling,"28,000"
+2010,NSW,Undefined Plastic (Category),MSW,Landfill,"278,789"
+2010,NSW,Undefined Plastic (Category),MSW,Recycling,"44,500"
+2010,NSW,Undefined Plastic (Category),Total,Landfill,"748,598"
+2010,NSW,Undefined Plastic (Category),Total,Recycling,"72,500"
+2010,NT,Polyethylene terephthalate (PET),MSW,Recycling,403
+2010,NT,Polyethylene terephthalate (PET),Total,Recycling,403
+2010,NT,Undefined Plastic (Category),C&D,Landfill,"3,342"
+2010,NT,Undefined Plastic (Category),C&I,Landfill,"8,132"
+2010,NT,Undefined Plastic (Category),MSW,Landfill,"19,157"
+2010,NT,Undefined Plastic (Category),MSW,Recycling,403
+2010,NT,Undefined Plastic (Category),Total,Landfill,"30,631"
+2010,NT,Undefined Plastic (Category),Total,Recycling,403
+2010,Qld,Undefined Plastic (Category),C&D,Landfill,"23,863"
+2010,Qld,Undefined Plastic (Category),C&D,Recycling,59
+2010,Qld,Undefined Plastic (Category),C&I,Landfill,"231,580"
+2010,Qld,Undefined Plastic (Category),C&I,Recycling,"11,785"
+2010,Qld,Undefined Plastic (Category),MSW,Landfill,"266,487"
+2010,Qld,Undefined Plastic (Category),MSW,Recycling,"17,693"
+2010,Qld,Undefined Plastic (Category),Total,Landfill,"521,930"
+2010,Qld,Undefined Plastic (Category),Total,Recycling,"29,537"
+2010,SA,High density polyethylene (HDPE),Total,Recycling,"4,600"
+2010,SA,Low density polyethylene (LDPE),Total,Recycling,"4,600"
+2010,SA,Other plastics,Total,Recycling,"5,800"
+2010,SA,Polyethylene terephthalate (PET),Total,Recycling,"4,100"
+2010,SA,Polypropylene (PP),Total,Recycling,"4,000"
+2010,SA,Polystyrene (PS),Total,Recycling,430
+2010,SA,Polyvinyl chloride (PVC),Total,Recycling,170
+2010,SA,Undefined Plastic (Category),C&D,Landfill,"2,575"
+2010,SA,Undefined Plastic (Category),C&I,Energy from waste facility,"16,500"
+2010,SA,Undefined Plastic (Category),C&I,Landfill,"16,234"
+2010,SA,Undefined Plastic (Category),MSW,Landfill,"23,310"
+2010,SA,Undefined Plastic (Category),Total,Energy from waste facility,"16,500"
+2010,SA,Undefined Plastic (Category),Total,Landfill,"42,119"
+2010,SA,Undefined Plastic (Category),Total,Recycling,"23,700"
+2010,Tas,Undefined Plastic (Category),C&D,Landfill,"1,045"
+2010,Tas,Undefined Plastic (Category),C&I,Landfill,"47,393"
+2010,Tas,Undefined Plastic (Category),C&I,Recycling,"3,386"
+2010,Tas,Undefined Plastic (Category),MSW,Landfill,"26,472"
+2010,Tas,Undefined Plastic (Category),MSW,Recycling,171
+2010,Tas,Undefined Plastic (Category),Total,Landfill,"74,910"
+2010,Tas,Undefined Plastic (Category),Total,Recycling,"3,557"
+2010,Vic,Undefined Plastic (Category),C&D,Landfill,"20,280"
+2010,Vic,Undefined Plastic (Category),C&D,Recycling,"3,216"
+2010,Vic,Undefined Plastic (Category),C&I,Landfill,"271,688"
+2010,Vic,Undefined Plastic (Category),C&I,Recycling,"86,991"
+2010,Vic,Undefined Plastic (Category),MSW,Landfill,"250,918"
+2010,Vic,Undefined Plastic (Category),MSW,Recycling,"55,996"
+2010,Vic,Undefined Plastic (Category),Total,Landfill,"542,887"
+2010,Vic,Undefined Plastic (Category),Total,Recycling,"146,203"
+2010,WA,High density polyethylene (HDPE),Total,Recycling,"6,056"
+2010,WA,Low density polyethylene (LDPE),Total,Recycling,"1,968"
+2010,WA,Other plastics,Total,Recycling,"1,955"
+2010,WA,Polyethylene terephthalate (PET),Total,Recycling,"1,808"
+2010,WA,Polypropylene (PP),Total,Recycling,"1,904"
+2010,WA,Polystyrene (PS),Total,Recycling,374
+2010,WA,Polyvinyl chloride (PVC),Total,Recycling,288
+2010,WA,Undefined Plastic (Category),C&D,Landfill,"45,476"
+2010,WA,Undefined Plastic (Category),C&I,Landfill,"207,674"
+2010,WA,Undefined Plastic (Category),MSW,Landfill,"89,971"
+2010,WA,Undefined Plastic (Category),Total,Landfill,"343,121"
+2010,WA,Undefined Plastic (Category),Total,Recycling,"14,353"
+2009,ACT,Undefined Plastic (Category),C&D,Landfill,"2,005"
+2009,ACT,Undefined Plastic (Category),C&I,Landfill,"15,359"
+2009,ACT,Undefined Plastic (Category),C&I,Recycling,685
+2009,ACT,Undefined Plastic (Category),MSW,Landfill,"6,285"
+2009,ACT,Undefined Plastic (Category),MSW,Recycling,"1,224"
+2009,ACT,Undefined Plastic (Category),Total,Landfill,"23,650"
+2009,ACT,Undefined Plastic (Category),Total,Recycling,"1,909"
+2009,NSW,Undefined Plastic (Category),C&D,Landfill,"24,693"
+2009,NSW,Undefined Plastic (Category),C&I,Landfill,"419,413"
+2009,NSW,Undefined Plastic (Category),C&I,Recycling,"28,000"
+2009,NSW,Undefined Plastic (Category),MSW,Landfill,"278,376"
+2009,NSW,Undefined Plastic (Category),MSW,Recycling,"44,500"
+2009,NSW,Undefined Plastic (Category),Total,Landfill,"722,482"
+2009,NSW,Undefined Plastic (Category),Total,Recycling,"72,500"
+2009,NT,Polyethylene terephthalate (PET),MSW,Recycling,399
+2009,NT,Polyethylene terephthalate (PET),Total,Recycling,399
+2009,NT,Undefined Plastic (Category),C&D,Landfill,"3,307"
+2009,NT,Undefined Plastic (Category),C&I,Landfill,"8,048"
+2009,NT,Undefined Plastic (Category),MSW,Landfill,"18,959"
+2009,NT,Undefined Plastic (Category),MSW,Recycling,399
+2009,NT,Undefined Plastic (Category),Total,Landfill,"30,314"
+2009,NT,Undefined Plastic (Category),Total,Recycling,399
+2009,Qld,Undefined Plastic (Category),C&D,Landfill,"35,179"
+2009,Qld,Undefined Plastic (Category),C&D,Recycling,56
+2009,Qld,Undefined Plastic (Category),C&I,Landfill,"265,400"
+2009,Qld,Undefined Plastic (Category),C&I,Recycling,"11,193"
+2009,Qld,Undefined Plastic (Category),MSW,Landfill,"265,019"
+2009,Qld,Undefined Plastic (Category),MSW,Recycling,"16,803"
+2009,Qld,Undefined Plastic (Category),Total,Landfill,"565,598"
+2009,Qld,Undefined Plastic (Category),Total,Recycling,"28,052"
+2009,SA,High density polyethylene (HDPE),Total,Recycling,"4,900"
+2009,SA,Low density polyethylene (LDPE),Total,Recycling,"4,200"
+2009,SA,Other plastics,Total,Recycling,"1,600"
+2009,SA,Polyethylene terephthalate (PET),Total,Recycling,"5,500"
+2009,SA,Polypropylene (PP),Total,Recycling,"4,000"
+2009,SA,Polystyrene (PS),Total,Recycling,200
+2009,SA,Polyvinyl chloride (PVC),Total,Recycling,80
+2009,SA,Undefined Plastic (Category),C&D,Landfill,"3,078"
+2009,SA,Undefined Plastic (Category),C&I,Energy from waste facility,"16,500"
+2009,SA,Undefined Plastic (Category),C&I,Landfill,"19,613"
+2009,SA,Undefined Plastic (Category),MSW,Landfill,"28,218"
+2009,SA,Undefined Plastic (Category),Total,Energy from waste facility,"16,500"
+2009,SA,Undefined Plastic (Category),Total,Landfill,"50,909"
+2009,SA,Undefined Plastic (Category),Total,Recycling,"20,480"
+2009,Tas,Undefined Plastic (Category),C&D,Landfill,743
+2009,Tas,Undefined Plastic (Category),C&I,Landfill,"40,318"
+2009,Tas,Undefined Plastic (Category),C&I,Recycling,"1,698"
+2009,Tas,Undefined Plastic (Category),MSW,Landfill,"24,554"
+2009,Tas,Undefined Plastic (Category),MSW,Recycling,465
+2009,Tas,Undefined Plastic (Category),Total,Landfill,"65,616"
+2009,Tas,Undefined Plastic (Category),Total,Recycling,"2,163"
+2009,Vic,Undefined Plastic (Category),C&D,Landfill,"19,644"
+2009,Vic,Undefined Plastic (Category),C&D,Recycling,"2,941"
+2009,Vic,Undefined Plastic (Category),C&I,Landfill,"263,156"
+2009,Vic,Undefined Plastic (Category),C&I,Recycling,"96,754"
+2009,Vic,Undefined Plastic (Category),MSW,Landfill,"251,660"
+2009,Vic,Undefined Plastic (Category),MSW,Recycling,"55,111"
+2009,Vic,Undefined Plastic (Category),Total,Landfill,"534,459"
+2009,Vic,Undefined Plastic (Category),Total,Recycling,"154,806"
+2009,WA,High density polyethylene (HDPE),Total,Recycling,"5,474"
+2009,WA,Low density polyethylene (LDPE),Total,Recycling,"1,498"
+2009,WA,Other plastics,Total,Recycling,848
+2009,WA,Polyethylene terephthalate (PET),Total,Recycling,"2,842"
+2009,WA,Polypropylene (PP),Total,Recycling,"2,370"
+2009,WA,Polystyrene (PS),Total,Recycling,430
+2009,WA,Polyvinyl chloride (PVC),Total,Recycling,476
+2009,WA,Undefined Plastic (Category),C&D,Landfill,"60,732"
+2009,WA,Undefined Plastic (Category),C&I,Landfill,"281,261"
+2009,WA,Undefined Plastic (Category),MSW,Landfill,"119,876"
+2009,WA,Undefined Plastic (Category),Total,Landfill,"461,869"
+2009,WA,Undefined Plastic (Category),Total,Recycling,"13,938"
+2008,ACT,Undefined Plastic (Category),C&D,Landfill,"1,419"
+2008,ACT,Undefined Plastic (Category),C&I,Landfill,"14,623"
+2008,ACT,Undefined Plastic (Category),C&I,Recycling,551
+2008,ACT,Undefined Plastic (Category),MSW,Landfill,"8,435"
+2008,ACT,Undefined Plastic (Category),MSW,Recycling,695
+2008,ACT,Undefined Plastic (Category),Total,Landfill,"24,477"
+2008,ACT,Undefined Plastic (Category),Total,Recycling,"1,246"
+2008,NSW,Undefined Plastic (Category),C&D,Landfill,"42,435"
+2008,NSW,Undefined Plastic (Category),C&D,Recycling,141
+2008,NSW,Undefined Plastic (Category),C&I,Landfill,"523,974"
+2008,NSW,Undefined Plastic (Category),C&I,Recycling,"29,306"
+2008,NSW,Undefined Plastic (Category),MSW,Landfill,"302,375"
+2008,NSW,Undefined Plastic (Category),MSW,Recycling,"40,832"
+2008,NSW,Undefined Plastic (Category),Total,Landfill,"868,783"
+2008,NSW,Undefined Plastic (Category),Total,Recycling,"70,279"
+2008,NT,High density polyethylene (HDPE),C&I,Recycling,50
+2008,NT,High density polyethylene (HDPE),MSW,Recycling,150
+2008,NT,High density polyethylene (HDPE),Total,Recycling,200
+2008,NT,Other plastics,C&I,Recycling,50
+2008,NT,Other plastics,MSW,Recycling,60
+2008,NT,Other plastics,Total,Recycling,110
+2008,NT,Polyethylene terephthalate (PET),C&I,Recycling,100
+2008,NT,Polyethylene terephthalate (PET),MSW,Recycling,200
+2008,NT,Polyethylene terephthalate (PET),Total,Recycling,300
+2008,NT,Undefined Plastic (Category),C&D,Landfill,"3,271"
+2008,NT,Undefined Plastic (Category),C&I,Landfill,"7,960"
+2008,NT,Undefined Plastic (Category),C&I,Recycling,200
+2008,NT,Undefined Plastic (Category),MSW,Landfill,"18,752"
+2008,NT,Undefined Plastic (Category),MSW,Recycling,410
+2008,NT,Undefined Plastic (Category),Total,Landfill,"29,983"
+2008,NT,Undefined Plastic (Category),Total,Recycling,610
+2008,Qld,Undefined Plastic (Category),C&D,Landfill,"33,113"
+2008,Qld,Undefined Plastic (Category),C&D,Recycling,57
+2008,Qld,Undefined Plastic (Category),C&I,Landfill,"274,361"
+2008,Qld,Undefined Plastic (Category),C&I,Recycling,"11,904"
+2008,Qld,Undefined Plastic (Category),MSW,Landfill,"284,009"
+2008,Qld,Undefined Plastic (Category),MSW,Recycling,"16,586"
+2008,Qld,Undefined Plastic (Category),Total,Landfill,"591,483"
+2008,Qld,Undefined Plastic (Category),Total,Recycling,"28,547"
+2008,SA,High density polyethylene (HDPE),Total,Recycling,"2,685"
+2008,SA,Low density polyethylene (LDPE),Total,Recycling,"2,954"
+2008,SA,Other plastics,Total,Recycling,462
+2008,SA,Polyethylene terephthalate (PET),Total,Recycling,"5,200"
+2008,SA,Polypropylene (PP),Total,Recycling,"1,529"
+2008,SA,Polystyrene (PS),Total,Recycling,540
+2008,SA,Polyvinyl chloride (PVC),Total,Recycling,408
+2008,SA,Undefined Plastic (Category),C&D,Landfill,"3,352"
+2008,SA,Undefined Plastic (Category),C&I,Energy from waste facility,"16,500"
+2008,SA,Undefined Plastic (Category),C&I,Landfill,"21,360"
+2008,SA,Undefined Plastic (Category),MSW,Landfill,"30,732"
+2008,SA,Undefined Plastic (Category),Total,Energy from waste facility,"16,500"
+2008,SA,Undefined Plastic (Category),Total,Landfill,"55,444"
+2008,SA,Undefined Plastic (Category),Total,Recycling,"13,778"
+2008,Tas,Undefined Plastic (Category),C&D,Landfill,686
+2008,Tas,Undefined Plastic (Category),C&I,Landfill,"41,997"
+2008,Tas,Undefined Plastic (Category),C&I,Recycling,648
+2008,Tas,Undefined Plastic (Category),MSW,Landfill,"24,613"
+2008,Tas,Undefined Plastic (Category),MSW,Recycling,178
+2008,Tas,Undefined Plastic (Category),Total,Landfill,"67,295"
+2008,Tas,Undefined Plastic (Category),Total,Recycling,826
+2008,Vic,Undefined Plastic (Category),C&D,Landfill,"9,310"
+2008,Vic,Undefined Plastic (Category),C&D,Recycling,"3,879"
+2008,Vic,Undefined Plastic (Category),C&I,Landfill,"204,774"
+2008,Vic,Undefined Plastic (Category),C&I,Recycling,"89,062"
+2008,Vic,Undefined Plastic (Category),MSW,Landfill,"198,733"
+2008,Vic,Undefined Plastic (Category),MSW,Recycling,"50,708"
+2008,Vic,Undefined Plastic (Category),Total,Landfill,"412,817"
+2008,Vic,Undefined Plastic (Category),Total,Recycling,"143,649"
+2008,WA,High density polyethylene (HDPE),Total,Recycling,"6,700"
+2008,WA,Low density polyethylene (LDPE),Total,Recycling,"3,685"
+2008,WA,Other plastics,Total,Recycling,"1,117"
+2008,WA,Polyethylene terephthalate (PET),Total,Recycling,"3,751"
+2008,WA,Polypropylene (PP),Total,Recycling,"2,983"
+2008,WA,Polystyrene (PS),Total,Recycling,530
+2008,WA,Polyvinyl chloride (PVC),Total,Recycling,652
+2008,WA,Undefined Plastic (Category),C&D,Landfill,"48,223"
+2008,WA,Undefined Plastic (Category),C&I,Landfill,"221,628"
+2008,WA,Undefined Plastic (Category),MSW,Landfill,"95,205"
+2008,WA,Undefined Plastic (Category),Total,Landfill,"365,056"
+2008,WA,Undefined Plastic (Category),Total,Recycling,"19,418"
+2006,ACT,Undefined Plastic (Category),C&D,Landfill,"1,071"
+2006,ACT,Undefined Plastic (Category),C&I,Landfill,"14,265"
+2006,ACT,Undefined Plastic (Category),C&I,Recycling,338
+2006,ACT,Undefined Plastic (Category),MSW,Landfill,"10,697"
+2006,ACT,Undefined Plastic (Category),MSW,Recycling,827
+2006,ACT,Undefined Plastic (Category),Total,Landfill,"26,033"
+2006,ACT,Undefined Plastic (Category),Total,Recycling,"1,165"
+2006,NSW,Undefined Plastic (Category),C&D,Landfill,"24,781"
+2006,NSW,Undefined Plastic (Category),C&D,Recycling,"1,842"
+2006,NSW,Undefined Plastic (Category),C&I,Landfill,"446,344"
+2006,NSW,Undefined Plastic (Category),C&I,Recycling,"37,285"
+2006,NSW,Undefined Plastic (Category),MSW,Landfill,"278,789"
+2006,NSW,Undefined Plastic (Category),MSW,Recycling,"34,559"
+2006,NSW,Undefined Plastic (Category),Total,Landfill,"749,913"
+2006,NSW,Undefined Plastic (Category),Total,Recycling,"73,686"
+2006,NT,High density polyethylene (HDPE),C&I,Recycling,50
+2006,NT,High density polyethylene (HDPE),MSW,Recycling,150
+2006,NT,High density polyethylene (HDPE),Total,Recycling,200
+2006,NT,Other plastics,C&I,Recycling,50
+2006,NT,Other plastics,MSW,Recycling,60
+2006,NT,Other plastics,Total,Recycling,110
+2006,NT,Polyethylene terephthalate (PET),C&I,Recycling,100
+2006,NT,Polyethylene terephthalate (PET),MSW,Recycling,200
+2006,NT,Polyethylene terephthalate (PET),Total,Recycling,300
+2006,NT,Undefined Plastic (Category),C&D,Landfill,"5,381"
+2006,NT,Undefined Plastic (Category),C&I,Landfill,"13,096"
+2006,NT,Undefined Plastic (Category),C&I,Recycling,200
+2006,NT,Undefined Plastic (Category),MSW,Landfill,"30,849"
+2006,NT,Undefined Plastic (Category),MSW,Recycling,410
+2006,NT,Undefined Plastic (Category),Total,Landfill,"49,326"
+2006,NT,Undefined Plastic (Category),Total,Recycling,610
+2006,Qld,Undefined Plastic (Category),C&D,Landfill,"31,411"
+2006,Qld,Undefined Plastic (Category),C&D,Recycling,560
+2006,Qld,Undefined Plastic (Category),C&I,Landfill,"260,262"
+2006,Qld,Undefined Plastic (Category),C&I,Recycling,"13,388"
+2006,Qld,Undefined Plastic (Category),MSW,Landfill,"269,415"
+2006,Qld,Undefined Plastic (Category),MSW,Recycling,"17,187"
+2006,Qld,Undefined Plastic (Category),Total,Landfill,"561,088"
+2006,Qld,Undefined Plastic (Category),Total,Recycling,"31,135"
+2006,SA,High density polyethylene (HDPE),Total,Recycling,"2,779"
+2006,SA,Low density polyethylene (LDPE),Total,Recycling,"5,403"
+2006,SA,Other plastics,Total,Recycling,922
+2006,SA,Polyethylene terephthalate (PET),Total,Recycling,"5,704"
+2006,SA,Polypropylene (PP),Total,Recycling,"1,542"
+2006,SA,Polystyrene (PS),Total,Recycling,167
+2006,SA,Polyvinyl chloride (PVC),Total,Recycling,363
+2006,SA,Undefined Plastic (Category),C&D,Landfill,"3,645"
+2006,SA,Undefined Plastic (Category),C&I,Landfill,"22,527"
+2006,SA,Undefined Plastic (Category),MSW,Landfill,"33,048"
+2006,SA,Undefined Plastic (Category),Total,Landfill,"59,220"
+2006,SA,Undefined Plastic (Category),Total,Recycling,"16,880"
+2006,Tas,Undefined Plastic (Category),C&D,Landfill,370
+2006,Tas,Undefined Plastic (Category),C&I,Landfill,"29,238"
+2006,Tas,Undefined Plastic (Category),C&I,Recycling,914
+2006,Tas,Undefined Plastic (Category),MSW,Landfill,"44,303"
+2006,Tas,Undefined Plastic (Category),MSW,Recycling,241
+2006,Tas,Undefined Plastic (Category),Total,Landfill,"73,910"
+2006,Tas,Undefined Plastic (Category),Total,Recycling,"1,155"
+2006,Vic,Undefined Plastic (Category),C&D,Landfill,"8,613"
+2006,Vic,Undefined Plastic (Category),C&D,Recycling,"7,512"
+2006,Vic,Undefined Plastic (Category),C&I,Landfill,"209,789"
+2006,Vic,Undefined Plastic (Category),C&I,Recycling,"64,908"
+2006,Vic,Undefined Plastic (Category),MSW,Landfill,"210,931"
+2006,Vic,Undefined Plastic (Category),MSW,Recycling,"39,030"
+2006,Vic,Undefined Plastic (Category),Total,Landfill,"429,333"
+2006,Vic,Undefined Plastic (Category),Total,Recycling,"111,450"
+2006,WA,Undefined Plastic (Category),C&D,Landfill,"46,766"
+2006,WA,Undefined Plastic (Category),C&I,Landfill,"215,396"
+2006,WA,Undefined Plastic (Category),MSW,Landfill,"92,244"
+2006,WA,Undefined Plastic (Category),Total,Landfill,"354,406"
+2006,WA,Undefined Plastic (Category),Total,Recycling,"18,130"

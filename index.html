@@ -1,0 +1,228 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+
+<head>
+	
+	<meta charset="utf-8">
+	<meta name="description"	content="Data Visualisation Group Assignment"> 
+	<meta name="keywords"		content="HTML, CSS, D3" /> 
+	<meta name="author" 		content="Julian Draudins, Tien le Thuy" />
+	
+	<link rel="stylesheet" href="css/style.css">
+
+	
+	<script src="https://d3js.org/d3.v5.min.js"></script>
+	<script src="scripts/script.js"> </script>
+	
+	    <!-- Semantics UI -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw==" crossorigin="anonymous"></script>
+	
+	<title>Plastic Propaganda</title> 
+	
+	<style>
+	
+		.ui.container{
+				padding-top:2em;
+			}
+			
+		.ui.text.container {
+			padding-top:21em;
+			padding-bottom:21em;
+		}
+			
+		
+			
+	</style>
+	
+	<!-- <svg xmlns="http://w3.org/2000/svg" viewBox="0 0 100 100"> -->
+	<!-- <text y=".9em" font-size="90">😱</text> -->
+	<!-- </svg> -->
+	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🗑</text></svg>">
+	
+</head> 
+
+<body>
+
+
+
+	<!-- Site Content  -->
+	<div class="pusher">
+		<!-- Header -->
+		<div class="ui inverted vertical masthead center aligned segment">
+	
+			<div class="ui text container">
+				<h1 class="ui inverted header">
+				COS300045 - Data Visualisation Group Assignment
+				</h1>
+				<h2>Plastic Propoganda</h2>
+				<a href="#graph1" id='button_graph1' class="fluid item ">
+					<div class="ui huge inverted primary button">Graph 1 <i class="right arrow icon"></i></div>
+				</a>
+				<a href="#graph2" id='button_graph2' class="fluid item ">
+					<div class="ui huge inverted primary button">Graph 2 <i class="right arrow icon"></i></div>
+				</a>
+				<a href="#graph3" id='button_graph3' class="fluid item ">
+					<div class="ui huge inverted primary button">Graph 3 <i class="right arrow icon"></i></div>
+				</a>
+				
+			
+			</div>
+		
+		</div>
+		
+		<!-- Chart Content Here -->
+		
+			
+			<!-- Graph 1 Content -->
+			<div class="ui segment" id="graph1">
+				
+				<!-- Navigation Buttons -->
+				<a href="#graph3" class="fluid item ">
+					<div class="ui left floated inverted primary button"><i class="left arrow icon"></i>Graph 3 </div>
+				</a>				
+				<a href="#graph2" class="fluid item ">
+					<div class="ui right floated inverted primary button">Graph 2 <i class="right arrow icon"></i></div>
+				</a>
+			
+				<!-- Graph 1 - Header  -->
+				<div class="ui container" > 	
+					<h2 id="graph1_header" class="ui header"> Graph 1 - Plastic Waste Geo Map (Tonnes)
+						<button onclick="reset_filters()" class="ui primary right floated button">Reset Filters</button>
+					</h2>
+					
+				
+				<div class="ui four item menu">
+				
+					<div class="ui item">
+						<i class="filter icon"></i>
+						<div class="content">
+						Filter By Year:
+						<div onclick=toggle_dropdown(id) id="chart1_year" class="ui inline simple dropdown">
+							<label class="text"></label>
+							<i class="dropdown icon"></i>
+						</div>
+						</div>
+					</div>
+					
+					<div class="ui item">
+						<i class="filter icon"></i>
+						<div class="content">
+						Filter By Plastic:
+						<div onclick=toggle_dropdown(id) id="chart1_type" class="ui inline simple dropdown">
+							<label class="text"></label>
+							<i class="dropdown icon"></i>
+						</div>
+						</div>
+					</div>
+					
+					<div class="ui item">
+						<i class="filter icon"></i>
+						<div class="content">
+						Filter By Stream:
+						<div onclick=toggle_dropdown(id) id="chart1_stream" class="ui inline simple dropdown">
+							<label class="text"></label>
+							<i class="dropdown icon"></i>
+						</div>
+						</div>
+					</div>
+					
+					<div class="ui item">
+						<i class="filter icon"></i>
+						<div class="content">
+						Filter By Fate:
+						<div onclick=toggle_dropdown(id) id="chart1_fate" class="ui inline simple dropdown">
+							<label class="text"></label>
+							<i class="dropdown icon"></i>
+						</div>
+						</div>
+					</div>
+					
+				</div>
+						
+				</div>		
+								
+					<!-- javascript will insert  Chart 1 svg here -->
+					<div id="chart1" class="ui center container"></div>
+				
+			</div>
+
+			
+			<!-- Graph 2 Content -->
+	
+			
+			<div class="ui raised segment" id="graph2">
+			
+				<!-- Navigation Buttons -->
+				<a href="#graph1"  class="fluid item ">
+					<div class="ui left floated inverted primary button"><i class="left arrow icon"></i>Graph 1 </div>
+				</a>
+				<a href="#graph3" class="fluid item ">
+					<div class="ui right floated inverted primary button">Graph 3 <i class="right arrow icon"></i></div>
+				</a>
+				
+				
+				<!-- Header - Graph 2  -->
+				<div class="ui container">
+					<h2 class="ui header">Graph 2</h2>
+				</div>
+				
+				<div class="ui secondary icon menu">
+					<div class = "ui container" id="chart2"></div>
+				</div>
+			</div>
+			
+
+
+		
+	<!-- Graph 3 Content -->
+			<div class="ui stacked segment" id="graph3">
+				<!-- Navigation Buttons -->
+				<a href="#graph2" class="fluid item ">
+					<div class="ui left floated inverted primary button"><i class="left arrow icon"></i>Graph 2 </div>
+				</a>
+				<a href="#graph1" class="fluid item ">
+					<div class="ui right floated inverted primary button">Graph 1 <i class="right arrow icon"></i></div>
+				</a>
+				
+				<!-- Graph 3 - Header  -->
+				<div class="ui container">
+					<h2 class="ui center aligned header">Graph 3 - Plastic Waste By Type (with Decomposition)</h2>
+				</div>	
+							
+								
+					<i class="filter icon"></i>
+					Filter By Year:
+					<div id="chart3_year" class="ui inline simple dropdown">
+						<label class="text"></label>
+						<i class="dropdown icon"></i>
+					</div>
+							
+						
+					
+					<button id="run_animation" class="ui primary right floated button">Run Animation</button>
+					<div class = "item" id="chart3"></div>
+				
+			</div>
+		
+		
+		<!-- Footer -->
+		<div class="ui inverted vertical footer segment">
+			<div style='padding-top:1em;'class="ui container">
+				
+				<h4 class="ui inverted header">COS300045 Data Visualisation</h4> 
+				<h4 class="ui inverted header">Julian Draudins 102332064</h4>
+				<h4 class="ui inverted header">Thuy Tien Le 102848464</h4>			
+				
+			</div>
+		</div>
+	
+		
+	</div>
+	
+	
+		
+</body>
+</html>
