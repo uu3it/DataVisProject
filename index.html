@@ -6,7 +6,7 @@
 	<meta charset="utf-8">
 	<meta name="description"	content="Data Visualisation Group Assignment"> 
 	<meta name="keywords"		content="HTML, CSS, D3" /> 
-	<meta name="author" 		content="Julian Draudins, Tien le Thuy" />
+	<meta name="author" 		content="Julian Draudins, Thuy Tien Le" />
 	
 	<link rel="stylesheet" href="css/style.css">
 
@@ -20,26 +20,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw==" crossorigin="anonymous"></script>
 	
-	<title>Plastic Propaganda</title> 
+	<title>Plastic Propoganda</title> 
 	
-	<style>
-	
-		.ui.container{
-				padding-top:2em;
-			}
-			
-		.ui.text.container {
-			padding-top:21em;
-			padding-bottom:21em;
-		}
-			
-		
-			
-	</style>
-	
-	<!-- <svg xmlns="http://w3.org/2000/svg" viewBox="0 0 100 100"> -->
-	<!-- <text y=".9em" font-size="90">😱</text> -->
-	<!-- </svg> -->
+	<!-- //Favicon is a Rubish Bin Emojoi  -->
 	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🗑</text></svg>">
 	
 </head> 
@@ -52,21 +35,31 @@
 	<div class="pusher">
 		<!-- Header -->
 		<div class="ui inverted vertical masthead center aligned segment">
-	
-			<div class="ui text container">
+			
+			<div style="padding-top:12em;padding-bottom:12em"class="ui text container">
 				<h1 class="ui inverted header">
 				COS300045 - Data Visualisation Group Assignment
 				</h1>
 				<h2>Plastic Propoganda</h2>
+				<h3 class = 'ui left aligned inverted header'>Plastic is an industry that is prevelant in consumer products. From take away containers to packaging material plastic is everywhere in our lives.
+					However, the idea that the plastic we put into our recycling bins is recycled is largely a lie that has been purpotrated by the producers of plastic
+					in order to make money. As an aside you can see that the 10 cent refund for each container policy in South Australia has seemingly impacted the amount of recycling in SA compared to every 
+					other state or territory.
+					<br><br> 	
+					This website seeks to illuminate just how much plastic is really recycled as well as some bonus information on the decomposition time for the different types of plastic.</h3>
+					
+				<br>
 				<a href="#graph1" id='button_graph1' class="fluid item ">
-					<div class="ui huge inverted primary button">Graph 1 <i class="right arrow icon"></i></div>
+					<div class="ui huge inverted primary button">Australia Map<i class="right arrow icon"></i></div>
 				</a>
 				<a href="#graph2" id='button_graph2' class="fluid item ">
-					<div class="ui huge inverted primary button">Graph 2 <i class="right arrow icon"></i></div>
+					<div class="ui huge inverted primary button">Plastic Fate <i class="right arrow icon"></i></div>
 				</a>
 				<a href="#graph3" id='button_graph3' class="fluid item ">
-					<div class="ui huge inverted primary button">Graph 3 <i class="right arrow icon"></i></div>
+					<div class="ui huge inverted primary button">Plastic Type <i class="right arrow icon"></i></div>
 				</a>
+				<br>
+				<h2>By Julian Draudins & Thuy Tien Le</h2>
 				
 			
 			</div>
@@ -89,65 +82,89 @@
 			
 				<!-- Graph 1 - Header  -->
 				<div class="ui container" > 	
-					<h2 id="graph1_header" class="ui header"> Graph 1 - Plastic Waste Geo Map (Tonnes)
-						<button onclick="reset_filters()" class="ui primary right floated button">Reset Filters</button>
+					<h2 id="graph1_header" class="ui header"> Graph 1 - Australia Plastic Waste Geo Map
+						
 					</h2>
 					
 				
-				<div class="ui four item menu">
-				
-					<div class="ui item">
-						<i class="filter icon"></i>
-						<div class="content">
-						Filter By Year:
-						<div onclick=toggle_dropdown(id) id="chart1_year" class="ui inline simple dropdown">
-							<label class="text"></label>
-							<i class="dropdown icon"></i>
-						</div>
-						</div>
-					</div>
+					<div class="ui four item menu">
 					
-					<div class="ui item">
-						<i class="filter icon"></i>
-						<div class="content">
-						Filter By Plastic:
-						<div onclick=toggle_dropdown(id) id="chart1_type" class="ui inline simple dropdown">
-							<label class="text"></label>
-							<i class="dropdown icon"></i>
+						<div class="ui item">
+						  <i class="filter icon"></i>
+						  <div class="content">
+							Filter By Year:
+							<div onclick=toggle_dropdown(id) id="chart1_year" class="ui inline simple dropdown">
+							  <label class="text"></label>
+							  <i class="dropdown icon"></i>
+							</div>
+						  </div>
 						</div>
-						</div>
-					</div>
-					
-					<div class="ui item">
-						<i class="filter icon"></i>
-						<div class="content">
-						Filter By Stream:
-						<div onclick=toggle_dropdown(id) id="chart1_stream" class="ui inline simple dropdown">
-							<label class="text"></label>
-							<i class="dropdown icon"></i>
-						</div>
-						</div>
-					</div>
-					
-					<div class="ui item">
-						<i class="filter icon"></i>
-						<div class="content">
-						Filter By Fate:
-						<div onclick=toggle_dropdown(id) id="chart1_fate" class="ui inline simple dropdown">
-							<label class="text"></label>
-							<i class="dropdown icon"></i>
-						</div>
-						</div>
-					</div>
-					
-				</div>
 						
+						<div class="ui item">
+						  <i class="filter icon"></i>
+						  <div class="content">
+							Filter By Plastic:
+							<div onclick=toggle_dropdown(id) id="chart1_type" class="ui inline simple dropdown">
+							  <label class="text"></label>
+							  <i class="dropdown icon"></i>
+							</div>
+						  </div>
+						</div>
+						
+						<div class="ui item">
+						  <i class="filter icon"></i>
+						  <div class="content">
+							Filter By Stream:
+							<div onclick=toggle_dropdown(id) id="chart1_stream" class="ui inline simple dropdown">
+
+							  <label class="text"></label>
+							  <i class="dropdown icon"></i>
+
+							</div>
+							<i class="tooltip info circle icon">
+									<span class="tooltiptext">  C&D - Construction and Demolition Waste <br>  C&I - Commercial and Industrial Waste <br>  MSW - Municipal Solid waste from Households and Council Operations <br>  Total - mix of all three</span>
+							</i>
+							
+						  </div>
+						</div>
+						
+						<div class="ui item">
+						  <i class="filter icon"></i>
+						  <div class="content">
+							Filter By Fate:
+							<div onclick=toggle_dropdown(id) id="chart1_fate" class="ui inline simple dropdown">
+							  <label class="text"></label>
+							  <i class="dropdown icon"></i>
+							</div>
+						  </div>
+						</div>
+						
+					</div>
+					<button onclick="reset_filters()" class="ui primary right floated button">Reset Filters</button>	
 				</div>		
 								
-					<!-- javascript will insert  Chart 1 svg here -->
-					<div id="chart1" class="ui center container"></div>
+				<!-- javascript will insert  Chart 1 svg here -->
+				<div id="chart1" class="ui center container"></div>
+			
+				<!-- Graph Description -->
+				<hr>
+				<div class="ui container" style="padding-top:0.5em">
+					<h2>Description</h2>
+					<p>Our Australia GeoMap is a interactive map which demonstrates through colour saturation, the volume of plastic waste created for each state or territory
+					from 2006 to 2018 ((data from 2007,2011 and 2012 was not included in the government database).
+					A filter menu is inlcuded so that the user can drill down to find specific statastics based on the year, plastic type, stream (origin of the waste,) and the 
+					eventual fate of the waste. 
+					<br>
+					A bar chart is included to help the user visualise the volume between states, which of course updates when the filters are changed. The user can also hover over a specific 
+					state or territory to display a separate bar chart that compares the landfill and recycling numbers. Feel free to play around with the filters and hover functionailty whilst 
+					keeping in mind you can reset the filters to 'All' by clicking the handing reset button.
+					<br>
+					With relative ease the user should be able to see the state/territoy's volume of waste and just how much of that ends up in a landfill.</p>
+				</div>
 				
+			
 			</div>
+			
 
 			
 			<!-- Graph 2 Content -->
@@ -165,13 +182,27 @@
 				
 				
 				<!-- Header - Graph 2  -->
-				<div class="ui container">
-					<h2 class="ui header">Graph 2</h2>
-				</div>
+				<!-- <div class="ui container"> -->
+					<!-- <h2 class="ui header">Graph 2 - Plastic Fate</h2> -->
+				<!-- </div> -->
 				
 				<div class="ui secondary icon menu">
 					<div class = "ui container" id="chart2"></div>
 				</div>
+				
+				<!-- Graph Description -->
+				<hr>
+				<div class="ui container" style="padding-top:0.5em">
+					<h2>Description</h2>
+					<p>Graph 2 is a line chart, with a purpose of demonstrating the wide gap between plastic that ends up in landfill and plastic that is recycled.
+						The line chart a ranges from 2006 to 2018 (data from 2007,2011 and 2012 was not included in the government database). Energy from waste facility 
+						started tracking from 2008, however as you can see the amount of plastic that is converted to energy is negligble compared to what ends up in recycling.
+						<br>
+						This chart also includes hover interactivity to display the exact tonnage for the specific year. From this graphic it should be clear that almost 10 times the
+						amount of plastic ends up in a landfill compared to recyled or energy.</p>
+				</div>
+				
+				
 			</div>
 			
 
@@ -188,35 +219,59 @@
 				</a>
 				
 				<!-- Graph 3 - Header  -->
-				<div class="ui container">
+				<div class="ui container" style="padding-top:2em">
 					<h2 class="ui center aligned header">Graph 3 - Plastic Waste By Type (with Decomposition)</h2>
 				</div>	
-							
+						 
 								
-					<i class="filter icon"></i>
+				   <i class="filter icon"></i>
 					Filter By Year:
 					<div id="chart3_year" class="ui inline simple dropdown">
-						<label class="text"></label>
-						<i class="dropdown icon"></i>
+					  <label class="text"></label>
+					  <i class="dropdown icon"></i>
 					</div>
 							
 						
 					
 					<button id="run_animation" class="ui primary right floated button">Run Animation</button>
 					<div class = "item" id="chart3"></div>
+					
+				<!-- Graph Description -->
+				<hr>
+				<div class="ui container">
+					<h2>Description</h2>
+					<p>We are all pretty familiar with the plastic recycling logo we see on plastic products. Did you know this is another extension of Plastic Propoganda?
+					You may see the recycling logo on a plastic product but that doesn't mean the plastic product is recyclable, rather it is categorizing what type of plastic the product is made from.
+						<ol>
+							<li>Polyethylene Terephthalate (PET)</li>
+							<li>High density polyethylene (HDPE)</li>
+							<li>Polyvinyl chloride (PVC)</li>
+							<li>Low density polyethylene (LDPE)</li>
+							<li>Polypropylene (PP)</li>
+							<li>Polystyrene (PS)</li>
+							<li>Other plastics</li>
+						</ol>
+					Graph 3 seeks to demonstrate the amount of plastic Australia generates according to these "Recycling" symbols broken down by years. By hovering over each category the user
+					is shown the specific tonnage figure of plastic as well as a description of how long this type of plastic takes to decompose. By clicking the 'Run Animation' button the user
+					can watch the graph cycle through the years demonstrating the change in consumption of each type of plastic.
+					<br>
+					Ultimately, we are hoping the user can get a deeper understanding of just how long plastic takes to decompose, thereby making them think about ones own use of plastic products.
+					</p>
+				</div>
+				
 				
 			</div>
 		
 		
 		<!-- Footer -->
 		<div class="ui inverted vertical footer segment">
-			<div style='padding-top:1em;'class="ui container">
+			
 				
 				<h4 class="ui inverted header">COS300045 Data Visualisation</h4> 
 				<h4 class="ui inverted header">Julian Draudins 102332064</h4>
 				<h4 class="ui inverted header">Thuy Tien Le 102848464</h4>			
 				
-			</div>
+
 		</div>
 	
 		

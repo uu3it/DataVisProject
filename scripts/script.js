@@ -7,7 +7,7 @@ var fates = [];
 
 //define the width and height of the SVG for Graph1
 const w = 1200;
-const h = 760;
+const h = 700;
 
 //Global varable that stores the data filtered by jurisdiction, year, type, stream and then fate
 //Used when the filter attributes changes
@@ -303,68 +303,157 @@ function generate_graph1(dataset){
 						.attr("fill","black")
 						.text(d.properties.STATE_NAME);
 						
+					
+					
+					//
+					add_filter_tags();
+					
+					console.log("Filter Tags 1");
+					console.log(filter_tags);
+					
+					//Add the jurisdiction tag to the start of the array
+					filter_tags.unshift(this.id);
+					
+					console.log("Filter Tags 2");
+					console.log(filter_tags);
+					
+					var landfill; 
+					var recycling; 
+		
+					
+					//There are four options for the Fate Dropdown
+					if(filter_variables.fate == 'All'){
+					//if 'All' is selected: Energy from waste facility, Landfill and Recycling will be included 
 						
-					var landfill_recycling  = [get_value2(this.id,tonnes_by_state_fate, 'Landfill'),get_value2(this.id,tonnes_by_state_fate, 'Recycling')]
+						filter_tags.length = (filter_tags.length - 3);  				//These tags are added last so reducing the length by 3 will remove them all
+						
+						console.log("Filter Tags 3A");
+						console.log(filter_tags);
+						
+						filter_tags.push("Landfill");									//Add back the Landfill tag
+						
+						console.log("Filter Tags 3B");
+						console.log(filter_tags);
+						
+						landfill = get_value5(tonnes_by_state_year_type_stream_fate);	//Get the value associated with this combination of tags (Landfill)
+						
+						console.log("landfill");
+						console.log(landfill);
+						
+						filter_tags.length = (filter_tags.length - 1);					//Remove the Landfill tag
+						
+						console.log("Filter Tags 3C");
+						console.log(filter_tags);
+						
+						filter_tags.push("Recycling");									//Add in the recycling tag
+						
+						console.log("Filter Tags 3D");
+						console.log(filter_tags);
+						
+						recycling =  get_value5(tonnes_by_state_year_type_stream_fate); //Get the value associated with this combination of tags (Recycling)
+						
+						console.log("Recycling");
+						console.log(recycling);
+						
+						
+					}else if(filter_variables.fate == 'Landfill'){
+					//If the Landfill tag is selected, recycling will be 0 and can get the value of Landfill
+					
+						recycling = 0;
+						landfill = get_value5(tonnes_by_state_year_type_stream_fate);
+						
+						console.log("landfill");
+						console.log(landfill);
+						
+						
+					}else if(filter_variables.fate == 'Recycling'){
+						
+						landfill  = 0;
+						recycling = get_value5(tonnes_by_state_year_type_stream_fate);
+						
+						console.log("Recycling");
+						console.log(recycling);
+						
+					}else{
+					//Energy from waste facility is selected therefore recycling and landfill both == 0
+					
+						recycling = 0;
+						landfill =  0;
+						
+					}
+		
+					//Add the landfill and recycling values to an array to pass into the d3 function as data 
+					var landfill_recycling  = [landfill,recycling]
 					
 					console.log(landfill_recycling);
 
+					var width1 = w*0.2;
 					
 					var xScale = d3.scaleBand()
 									.domain(d3.range(landfill_recycling.length))
-									.rangeRound([0,150]) //<-- enables rounding
+									.rangeRound([0,width1]) //<-- enables rounding
 									.paddingInner(0.20)
 									.paddingOuter(0.20)
 									; // 5% padding of the
 									
 					var xScale_Ordinal = d3.scaleBand()
 									.domain(["Landfill","Recycling"])
-									.rangeRound([0,150]) //<-- enables rounding
+									.rangeRound([0,width1]) //<-- enables rounding
 									.paddingInner(0.20) // 5% padding of the
 									.paddingOuter(0.20); // 5% padding of the
 								
-
+					var height1 = h*0.5;  
 					//Create Y Scale based on the max number of the landfill/recycling data
 					var	yScale = d3.scaleLinear()
-									.domain( [0, d3.max(landfill_recycling, function(d) { return d; } )*1.1 ] ) 
-									.range( [500,0] )
+									.domain( [0, d3.max(landfill_recycling, function(d) { return d; } )*1.2 ] ) //Multiply max by 1.1 to extend the y axis
+									.range( [height1,0] )
 									
 									
 					var xAxis = d3.axisBottom()
 								.ticks(5)
 								.scale(xScale_Ordinal);
 								
+					var margin_top = 100;
+					var margin_right = 80;
+								
+					//Generate the x Axis
+					svg1.append("g")
+						.attr("class","axis")
+						.attr("transform", "translate(" + margin_right + ", "+ (height1 + margin_top) + ")")
+						.call(xAxis);
+						
+								
 					var yAxis = d3.axisLeft()
 									.scale(yScale)
 									.ticks(5)
-
+									
+					
+					//<!-- Y Axis -->
+					svg1.append("g")
+						.attr("class", "axis")
+						.attr("transform","translate(" + margin_right + ","+ margin_top +")")
+						.call(yAxis);
+				
 					svg1.selectAll(".bar")
 						.data(landfill_recycling)
 						.enter()
 						.append("rect")
 						.attr("class","bar")
 						.attr("x", function(d,i){
-							return 60 + xScale(i);
+							return margin_right + xScale(i);
 						})
 						.attr("y",function(d){
-							return 50 + yScale(d);
+							return margin_top + yScale(d);
 						}) 
 						.attr("width", xScale.bandwidth())
 						.attr("height", function(d) {
-							return 500 - yScale(d);
+							return height1 - yScale(d);
 						})
 						.attr("fill","slategrey");
+						
+		
 
-						svg1.append("g")
-							.attr("class","axis")
-								.attr("transform", "translate(" + 60 + ", "+ 550 + ")")
-								.call(xAxis);
-							
-							//<!-- Y Axis -->
-							svg1.append("g")
-								.attr("class", "axis")
-								.attr("transform","translate(" + 60 + ",50)")
-									.call(yAxis);
-									
+								
 					//Second Line - Landfill
 					svg1.append("text")
 						.attr("id","tooltip2")
@@ -374,7 +463,7 @@ function generate_graph1(dataset){
 							return 50;
 						})
 						.attr("font-family","sans-serif")
-						.attr("font-size","20px")
+						.attr("font-size","18px")
 						.attr("text-anchor", "start")  //<!-- VERY IMPORTANT FOR ALLIGNMENT --!>
 						.attr("y",function(){
 								
@@ -382,7 +471,7 @@ function generate_graph1(dataset){
 								return 70;
 						})
 						.attr("fill","black")
-						.text("Total Plastic Waste: " + global_jurisdiction_values[this.id].toLocaleString('en') );  //.toLocaleString('en') converts a number to a 1000 comma separeted number as a string
+						.text("Total Plastic (Tonnes): " + global_jurisdiction_values[this.id].toLocaleString('en') );  //.toLocaleString('en') converts a number to a 1000 comma separeted number as a string
 					
 					//third Line - Recycling
 					// svg1.append("text")
@@ -520,6 +609,12 @@ function generate_graph1(dataset){
 
 function generate_graph1_bar_chart(){
 	
+	//Remove all the Labels
+	d3.selectAll('.yAxis1').remove();
+	d3.selectAll('.xAxis1').remove();
+	d3.selectAll('.graph1_bar').remove();
+
+	
 	var width = w*0.3;
 	var height = h*0.2;
 
@@ -530,14 +625,14 @@ function generate_graph1_bar_chart(){
 	var xScale1_axis = d3.scaleBand()
 						.domain(jurisdictions)
 						.range([0, width ])
-						.paddingInner(0.75)
-						.paddingOuter(0.75);
+						.paddingInner(0.50)
+						.paddingOuter(0.50);
 					
 	var xScale1 = d3.scaleBand()
 					.domain(d3.range(jurisdictions.length))
 					.rangeRound([0,width]) //<-- enables rounding
-					.paddingInner(0.75) 
-					.paddingOuter(0.75); 
+					.paddingInner(0.50) 
+					.paddingOuter(0.50); 
 					
 	var yScale1 = d3.scaleLinear()
 					.range([height,0])
@@ -592,6 +687,7 @@ function generate_graph1_bar_chart(){
 	//Generate Label for yAxis
 	d3.select("#svg1")
 		.append("text")
+		.attr("class","yAxis1_label")
         .attr("transform", "rotate(-90)")
         .attr("y",0)
         .attr("x",(0-h*0.85) )
@@ -653,8 +749,9 @@ function generate_graph1_bar_chart(){
 		//create a heading for the graph	
 		d3.select("#svg1")
 			.append("text")
+			.attr("class","bar_chart1_heading")
 			.attr("x", margin1.left + (width / 2))             
-			.attr("y", h*0.75)
+			.attr("y", h*0.73)
 			.attr("class","heading")
 			.attr("text-anchor", "middle")  
 			.style("font-size", "17px") 
@@ -738,9 +835,7 @@ function toggle_dropdown(id){
 	}
 }
 
-
-
-function update_australia_map(){
+function add_filter_tags(){
 	
 	//Clear the filter variables and add them based on the current selections factoring in "All" selections
 	filter_tags = [];
@@ -782,7 +877,14 @@ function update_australia_map(){
 	}else{
 		filter_tags.push(filter_variables.fate	);
 	};
+}
+
+function update_australia_map(){
 	
+	
+	
+	//Add filter tags depending on dropdown selections
+	add_filter_tags();
 	
 	console.log("Filter Tags: ");
 	console.log(filter_tags);
@@ -853,6 +955,9 @@ function update_australia_map(){
 	
 	// d3.select("#svg1").append("text").attr("x",  w/4+100 ).attr("y", h/10 -30).text("Colour Scale (Tonnes)").style("font-size", "20px").attr("alignment-baseline","middle").style("font-weight",1000).style("text-decoration","underline");
 	
+	//Generate the bar chart
+	generate_graph1_bar_chart();
+	
 }
 
 function get_value5(objects){
@@ -896,10 +1001,10 @@ function get_value5(objects){
 
 function generate_graph2(dataset){
 		const w = 1200;
-		const h = 680;
+		const h = 750;
 
 	
-		const margin2 = { left: 90, top: 100, right: 130, bottom: 30 } //Margin for the svg
+		const margin2 = { left: 100, top: 100, right: 140, bottom: 30 } //Margin for the svg
 	
 		var xScale2 = d3.scaleBand()
 						.domain(years)
@@ -950,18 +1055,22 @@ function generate_graph2(dataset){
 		//Create the xAxis based on the xScale		
 		var xAxis2 = d3.axisBottom()
 						.ticks(10)
-						.scale(xScale2);
+						.scale(xScale2)
+						;
 				
 		//Create the yScale based on the y scale 	
 		var yAxis2 = d3.axisLeft()
 						.ticks(10)
 						.scale(yScale2)
+						;
 						
 		//Generate the xAxis
 		svg2.append("g")
 			.attr("class","Axis")
 			.attr("transform", "translate(" + margin2.left + ", "+ h + ")")
-			.call(xAxis2);
+			.call(xAxis2)
+			.style("font-size", "18px")
+			;
 			
 		//Generate Label for X-Axis
 		svg2.append("text")             
@@ -979,7 +1088,9 @@ function generate_graph2(dataset){
 		svg2.append("g")
 			.attr("class", "Axis")
 			.attr("transform","translate(" + margin2.left + ","+ 0 +")")
-			.call(yAxis2);
+			.call(yAxis2)
+			.style("font-size", "15px")
+			;
 			
 		//Generate Label for yAxis
 		svg2.append("text")
@@ -988,7 +1099,7 @@ function generate_graph2(dataset){
 		  .attr("x",(0-h/2) )
 		  .attr("dy", "1em")
 		  .style("text-anchor", "middle")
-		  .text("Plastic Waste (Tonnes)")
+		  .text("Plastic (Tonnes)")
 		  .style("font-size", "20px")
 		  .style("font-wieght","bold")
 		  ;      
@@ -1060,7 +1171,7 @@ function generate_graph2(dataset){
 			.style("font-size", "30px") 
 			.style("text-decoration", "underline")  
 			.style("font-weight", "bold")  
-			.text("Plastic Waste Fates");	
+			.text("Graph 2 - Plastic Waste Fate");	
 			
 		//Create a legend for the graph
 		svg2.append("circle").attr("cx",900).attr("cy",40).attr("r", 6).style("fill", "#8da0cb")
@@ -1069,7 +1180,7 @@ function generate_graph2(dataset){
 		svg2.append("text").attr("x", 920).attr("y", 40).text("Landfill").style("font-size", "15px").attr("alignment-baseline","middle")
 		svg2.append("text").attr("x", 920).attr("y", 70).text("Recycling").style("font-size", "15px").attr("alignment-baseline","middle")
 		svg2.append("text").attr("x", 920).attr("y", 100).text("Energy from waste facility").style("font-size", "15px").attr("alignment-baseline","middle")
-		svg2.append("text").attr("x", 920).attr("y", 10).text("Legend").style("font-size", "20px").attr("alignment-baseline","middle").style("font-weight",1000)
+		svg2.append("text").attr("x", 960).attr("y", 10).text("Legend").style("font-size", "20px").attr("alignment-baseline","middle").style("font-weight",1000)
 		svg2.append("rect").attr("x",890).attr("y",25).attr("height", 90).attr("width", 210).style("fill", "none").style("stroke", "black")
 
 				
@@ -1225,7 +1336,7 @@ function generate_graph3(dataset){
       .attr("x",(0-h/2) )
       .attr("dy", "1em")
       .style("text-anchor", "middle")
-      .text("Plastic Waste (Tonnes)")
+      .text("Plastic (Tonnes)")
 	  .style("font-size", "20px")
 	  .style("font-wieght","bold")
 	  ;
@@ -1305,11 +1416,14 @@ function generate_graph3(dataset){
 	types_object['2014'] = types_2014;
 	types_object['2013'] = types_2013;
 	types_object['2010'] = types_2010;
+	types_object['2009'] = types_2009;
 	types_object['2008'] = types_2008;
 	types_object['2006'] = types_2006;
 										
 			
-	
+	console.log("types_object");
+	console.log(types_object);
+	console.log(Object.values(types_object) );
 			
 	function draw_rectangles(data){
 			
@@ -1386,6 +1500,8 @@ function generate_graph3(dataset){
 		return new Promise(resolve => setTimeout(resolve, ms));
 	}
 	
+	var duration = 2000;
+	
 	function transition_rectangles(data, year){
 		
 		
@@ -1393,7 +1509,7 @@ function generate_graph3(dataset){
 		svg3.selectAll("rect")
 			.data(data)
 			.transition()
-			.duration(3000)
+			.duration(duration)
 			.ease(d3.easeExpOut)
 			.attr("x",function(d,i){
 				
@@ -1413,7 +1529,7 @@ function generate_graph3(dataset){
 				return colour_scale3[i];
 			})
 			
-
+		//Change the heading to the year
 		svg3.selectAll(".heading")
 			.attr("x", (w / 2))             
 			.attr("y", 0 + (1.2*margin3.top))
@@ -1423,9 +1539,10 @@ function generate_graph3(dataset){
 			.style("font-weight", "bold")  
 			.text(year);
 				
-	
-				
 		
+		//Change the dropdown selection to the year input		
+		
+		$("#chart3_year" ).dropdown('set selected',year); 
 	}
 	
 
@@ -1435,46 +1552,14 @@ function generate_graph3(dataset){
 	d3.select("#run_animation")
 		.on("click", async function(){         //IMPORTANT - NEED TO MAKE FUNCTION ASYNC SO CAN USE await KEYWORD
 			
-			console.log("Run Animation");
+			for(var i = 0; i<years.length;i++)
+			{
+				transition_rectangles(Object.values(types_object)[i], Object.keys(types_object)[i]);
 			
-			transition_rectangles(types_2018, 2018);
-			
-			await sleep(1500);
-
-			transition_rectangles(types_2006, 2006);
-			 
-			await sleep(2500);
-
-			transition_rectangles(types_2008, 2008);
-			 
-			await sleep(2500);
-
-			transition_rectangles(types_2010, 2010);
-			 
-			await sleep(2500);
-
-			transition_rectangles(types_2013, 2013);
-			 
-			await sleep(2500);
-
-			transition_rectangles(types_2014, 2014);
-			 
-			await sleep(2500);
-
-			transition_rectangles(types_2015, 2015);
-			 
-			await sleep(2500);
-
-			transition_rectangles(types_2016, 2016);
-			 
-			await sleep(2500);
-			
-			transition_rectangles(types_2017, 2017);
-			
-			await sleep(2500);
-			
-			transition_rectangles(types_2018, 2018);
-			
+				await sleep(duration);
+			}
+		
+					
 		});
 		
 		
@@ -1484,29 +1569,29 @@ function generate_graph3(dataset){
 	//Function to initialize the dropdown menu with the year values	
 	function set_dropdown_menu(object, id){
 	
-	var menu = {values:[]}
-	
-	object.forEach(function(item, index)
-	{	
+		var menu = {values:[]}
 		
-			menu.values.push(
-			{
-				name:item,
-				value:item,
-				text:item,
-			})	
+		object.forEach(function(item, index)
+		{	
+			
+				menu.values.push(
+				{
+					name:item,
+					value:item,
+					text:item,
+				})	
 
-		
+			
 	});
 		  
 	
 	//Set the menu
-	$("#chart3_" + id )
+	$("#chart3_year")
 	  .dropdown('setup menu',menu)
 	;
 	
 	//Select 2018 as the default year
-	$("#chart3_" + id )
+	$("#chart3_year")
 	  .dropdown('set selected','2018')
 	;
 	
