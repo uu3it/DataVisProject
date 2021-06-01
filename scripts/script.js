@@ -1012,7 +1012,7 @@ function generate_graph2(dataset){
 		
 		//Y scale has midpoints a quarter of the way up the axis as creating a discontinuous y-axis graph
 		var yScale2 = d3.scaleLinear()
-						.range([h,3*h/4+100,3*h/4-100,margin2.top])
+						.range([h,650,550,margin2.top])
 		
 		var tonnes_by_year_fate = d3.nest()
 						.key(function(d) {return d.Year;})
@@ -1046,7 +1046,7 @@ function generate_graph2(dataset){
 		
 		//Update the y-scale domain based on the range of tonnes for landfill/recycling each year
 		//Domain specifies points that help to create a discontinuous axis
-		yScale2.domain( [0,150000,1000000 ,d3.max(tonnes_by_year_fate_range, function(d) { return d; } ) + 200000 ] );
+		yScale2.domain( [0,200000,300000 ,d3.max(tonnes_by_year_fate_range, function(d) { return d; } ) + 200000 ] );
 		
 		
 		var svg2 = d3.select("#chart2")
@@ -1109,15 +1109,15 @@ function generate_graph2(dataset){
 		//Append rectangles over the Y-axis to create a break in the axis scale
 		svg2.append("rect")
 		  .attr("x", margin2.left- 10)
-		  .attr("y", yScale2(400000))
-		  .attr("height", 40)
+		  .attr("y", yScale2(275000))
+		  .attr("height", 60)
 		  .attr("width", 20)
 
 		  ; 
 		svg2.append("rect")
 		  .attr("x", margin2.left - 11)
-		  .attr("y", yScale2(390000))
-		  .attr("height", 35)
+		  .attr("y", yScale2(270000))
+		  .attr("height", 50)
 		  .attr("width", 22)
 		  .style("fill", "white")
 		  ;
@@ -1128,9 +1128,9 @@ function generate_graph2(dataset){
 			.style("stroke-width", 1)
 			.style("stroke-dasharray", ("10, 10"))
 			.attr("x1", margin2.left)
-			.attr("y1", yScale2(300000))
+			.attr("y1", yScale2(245000))
 			.attr("x2", margin2.left + w)
-			.attr("y2",  yScale2(300000)); 
+			.attr("y2",  yScale2(245000)); 
 		 
 		
 		//Function that takes in the dataset and returns an object with the year and value 
