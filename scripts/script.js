@@ -1009,9 +1009,10 @@ function generate_graph2(dataset){
 		var xScale2 = d3.scaleBand()
 						.domain(years)
 						.range([0, w - margin2.right]);
-
+		
+		//Y scale has midpoints a quarter of the way up the axis as creating a discontinuous y-axis graph
 		var yScale2 = d3.scaleLinear()
-						.range([h,margin2.top])
+						.range([h,3*h/4+100,3*h/4-100,margin2.top])
 		
 		var tonnes_by_year_fate = d3.nest()
 						.key(function(d) {return d.Year;})
@@ -1044,7 +1045,8 @@ function generate_graph2(dataset){
 		});
 		
 		//Update the y-scale domain based on the range of tonnes for landfill/recycling each year
-		yScale2.domain( [0, d3.max(tonnes_by_year_fate_range, function(d) { return d; } ) + 200000 ] );
+		//Domain specifies points that help to create a discontinuous axis
+		yScale2.domain( [0,150000,1000000 ,d3.max(tonnes_by_year_fate_range, function(d) { return d; } ) + 200000 ] );
 		
 		
 		var svg2 = d3.select("#chart2")
@@ -1058,9 +1060,9 @@ function generate_graph2(dataset){
 						.scale(xScale2)
 						;
 				
-		//Create the yScale based on the y scale 	
+		//Create the yScale based on the y scale values, specify the exact ticks due to discontinuous axis	
 		var yAxis2 = d3.axisLeft()
-						.ticks(10)
+						.tickValues([0,50000,100000,150000,500000,1000000,2000000,3000000,4000000,5000000])
 						.scale(yScale2)
 						;
 						
@@ -1102,7 +1104,34 @@ function generate_graph2(dataset){
 		  .text("Plastic (Tonnes)")
 		  .style("font-size", "20px")
 		  .style("font-wieght","bold")
-		  ;      
+		  ;
+
+		//Append rectangles over the Y-axis to create a break in the axis scale
+		svg2.append("rect")
+		  .attr("x", margin2.left- 10)
+		  .attr("y", yScale2(400000))
+		  .attr("height", 40)
+		  .attr("width", 20)
+
+		  ; 
+		svg2.append("rect")
+		  .attr("x", margin2.left - 11)
+		  .attr("y", yScale2(390000))
+		  .attr("height", 35)
+		  .attr("width", 22)
+		  .style("fill", "white")
+		  ;
+		
+		//Add line to hammer home a break in the scale
+		svg2.append('line')
+			.style("stroke", "black")
+			.style("stroke-width", 1)
+			.style("stroke-dasharray", ("10, 10"))
+			.attr("x1", margin2.left)
+			.attr("y1", yScale2(300000))
+			.attr("x2", margin2.left + w)
+			.attr("y2",  yScale2(300000)); 
+		 
 		
 		//Function that takes in the dataset and returns an object with the year and value 
 		function get_fate_tonnage_by_year(tonnes_by_year_fate_object, fate_tag){
@@ -1135,32 +1164,54 @@ function generate_graph2(dataset){
 		var tonnes_year_recycling = get_fate_tonnage_by_year(tonnes_by_year_fate, "Recycling");
 		var tonnes_year_energy = get_fate_tonnage_by_year(tonnes_by_year_fate, "Energy from waste facility");
 		
+		//Add in 2006 as 0 Tonnes to tonnes_year_energy
+		tonnes_year_energy.push({Year:2006,Tonnes:0});
+		
+		
+		line = d3.line()
+				.x(function(d,i) { return xScale2(d.Year) + margin2.left + 54; } )
+				.y(function(d) { return yScale2(d.Tonnes); } );
 			
 		//Create are for colouring in the chart
-		area = d3.area()
-					.x(function(d) { return xScale2(d.Year) + margin2.left + 54; } )
-					.y0(function() { return yScale2.range()[0] } )
-					.y1(function(d) { return yScale2(d.Tonnes) } )
+		// area = d3.area()
+					// .x(function(d) { return xScale2(d.Year) + margin2.left + 54; } )
+					// .y0(function() { return yScale2.range()[0] } )
+					// .y1(function(d) { return yScale2(d.Tonnes) } )
 					
 		//Append path based on landfill data
 		svg2.append("path")
 			.datum(tonnes_year_landfill)			//Since one line use datum (singular) of data
-			.attr("class","area")
-			.attr("d",area)
-			.attr("fill", "#8da0cb");
+			.attr("class","line")
+			.attr("d",line)
+			.attr("stroke", "#8da0cb") 	
+			.attr("stroke-width","4px")
+			.attr("fill","none")
+			.style("stroke-dasharray", ("5, 5"))
+			;
+			
+		
 		//Append path based on landfill data
 		svg2.append("path")
 			.datum(tonnes_year_recycling)			//Since one line use datum (singular) of data
-			.attr("class","area")
-			.attr("d",area)
-			.attr("fill", "#66c2a5");
+			.attr("class","line")
+			.attr("d",line)
+			.attr("stroke", "#66c2a5")
+			.attr("stroke-width","4px")
+			.attr("fill","none")
+			.style("stroke-dasharray", ("3, 3"))
+			;
 		
 		//Append path based on landfill data
 		svg2.append("path")
 			.datum(tonnes_year_energy)			//Since one line use datum (singular) of data
-			.attr("class","area")
-			.attr("d",area)
-			.attr("fill", "#fc8d62");
+			.attr("class","line")
+			.attr("d",line)
+			.attr("stroke", "#fc8d62")
+			.attr("stroke-width","4px")
+			.attr("fill","none")
+			.style("stroke-dasharray", ("1, 1"))
+			;
+			
 		
 		//create a heading for the graph
 		svg2.append("text")
@@ -1183,7 +1234,194 @@ function generate_graph2(dataset){
 		svg2.append("text").attr("x", 960).attr("y", 10).text("Legend").style("font-size", "20px").attr("alignment-baseline","middle").style("font-weight",1000)
 		svg2.append("rect").attr("x",890).attr("y",25).attr("height", 90).attr("width", 210).style("fill", "none").style("stroke", "black")
 
+		//Mouse Over events for the lines:
+		var mouseG = svg2.append("g")
+						.attr("class", "mouse-over-effects");
+
+		mouseG.append("path") // this is the black vertical line to follow mouse
+			  .attr("class", "mouse-line-horizontal")
+			  .style("stroke", "black")
+			  .style("stroke-width", "1px")
+			  .style("opacity", "0");
+		
+		mouseG.append("path") // this is the black vertical line to follow mouse
+			  .attr("class", "mouse-line-vertical")
+			  .style("stroke", "black")
+			  .style("stroke-width", "1px")
+			  .style("opacity", "0");
+		  
+		var lines = document.getElementsByClassName('line');
+		
+		
+		//Create Mouse over effects for Landfill data/line
+		var mousePerLineLandfill = mouseG.selectAll('.mouse-per-line-landfill')
+								  .data(tonnes_year_landfill)
+								  .enter()
+								  .append("g")
+								  .attr("class", "mouse-per-line-landfill");
+
+		mousePerLineLandfill.append("circle")
+					  .attr("r", 7)
+					  .style("stroke", "#8da0cb")
+					  .style("fill", "none")
+					  .style("stroke-width", "1px")
+					  .style("opacity", "0");
+
+		mousePerLineLandfill.append("text")
+					.attr("transform", "translate(10,-20)")
+					.style("font-weight","bold");
+		
+		
+		//Create Mouse over effects for Recyling data/line
+		var mousePerLineRecycling = mouseG.selectAll('.mouse-per-line-recycling')
+								  .data(tonnes_year_recycling)
+								  .enter()
+								  .append("g")
+								  .attr("class", "mouse-per-line-recycling");
+
+		mousePerLineRecycling.append("circle")
+					  .attr("r", 7)
+					  .style("stroke", "#66c2a5")
+					  .style("fill", "none")
+					  .style("stroke-width", "1px")
+					  .style("opacity", "0");
+
+		mousePerLineRecycling.append("text")
+					.attr("transform", "translate(10,-20)")
+					.style("font-weight","bold");
+		
+		
+		//Create Mouse over effects for Energy Waste data/line
+		var mousePerLineEnergy = mouseG.selectAll('.mouse-per-line-energy')
+								  .data(tonnes_year_energy)
+								  .enter()
+								  .append("g")
+								  .attr("class", "mouse-per-line-energy");
+
+		mousePerLineEnergy.append("circle")
+					  .attr("r", 7)
+					  .style("stroke", "#fc8d62")
+					  .style("fill", "none")
+					  .style("stroke-width", "1px")
+					  .style("opacity", "0");
+
+		mousePerLineEnergy.append("text")
+					.attr("transform", "translate(10,-20)")
+					.style("font-weight","bold");
+
+		mouseG.append('svg:rect') // append a rect to catch mouse movements on canvas
+		  .attr('x',margin2.left)
+		  .attr('y',margin2.top)
+		  .attr('width', w) // can't catch mouse events on a g element
+		  .attr('height', h - margin2.top)
+		  .attr('fill', 'none')
+		  .attr('pointer-events', 'all')
+		  .on('mouseout', function() { // on mouse out hide line, circles and text
+			d3.select(".mouse-line-horizontal")
+			  .style("opacity", "0");			
+			d3.select(".mouse-line-vertical")
+			  .style("opacity", "0");
+			d3.selectAll(".mouse-per-line-landfill circle")
+			  .style("opacity", "0");
+			d3.selectAll(".mouse-per-line-landfill text")
+			  .style("opacity", "0");
+			d3.selectAll(".mouse-per-line-recycling circle")
+			  .style("opacity", "0");
+			d3.selectAll(".mouse-per-line-recycling text")
+			  .style("opacity", "0");
+			d3.selectAll(".mouse-per-line-energy circle")
+			  .style("opacity", "0");
+			d3.selectAll(".mouse-per-line-energy text")
+			  .style("opacity", "0");
+		  })
+		  .on('mouseover', function() { // on mouse in show line, circles and text
+			d3.select(".mouse-line-horizontal")
+			  .style("opacity", "1");			
+			d3.select(".mouse-line-vertical")
+			  .style("opacity", "1");
+			d3.selectAll(".mouse-per-line-landfill circle")
+			  .style("opacity", "1");
+			d3.selectAll(".mouse-per-line-landfill text")
+			  .style("opacity", "1");
+			d3.selectAll(".mouse-per-line-recycling circle")
+			  .style("opacity", "1");
+			d3.selectAll(".mouse-per-line-recycling text")
+			  .style("opacity", "1");
+			d3.selectAll(".mouse-per-line-energy circle")
+			  .style("opacity", "1");
+			d3.selectAll(".mouse-per-line-energy text")
+			  .style("opacity", "1");
+		  })
+		  .on('mousemove', function() { // mouse moving over canvas
+			var mouse = d3.mouse(this);
+					  
+			var x_array = [];
+			
+			years.forEach(function(year){
+				x_array.push(Math.abs(xScale2(year) + margin2.left + 54 - mouse[0]));
+			});
+			
+			var index = d3.scan(x_array,function(a,b){
+				return a-b;
+			});
+			
+			var closest_year = years[index];  
+			
+			console.log("The closest year is: " + closest_year);
+			
+			var closest_year = years[index];
+			
+			
+						//set the path of the vertical line based on the current position
+			d3.select(".mouse-line-vertical")
+			  .attr("d", function() {
+				var d = "M" + (xScale2(closest_year)+ margin2.left + 53) + "," + h ;
+				d += " " + (xScale2(closest_year)+ margin2.left + 53) + "," + margin2.top;
+				return d;
+			  });
+			
+			
+			var adjust_x = 0;
+			//adjust_x is used to push text to the left when approaching the right margin of the graph
+1			
+			if(index>8){
+				adjust_x = 120;
+			}	
+			
+			d3.select(".mouse-per-line-landfill circle")
+				.attr("cx", xScale2(closest_year)+ margin2.left + 53)
+				.attr("cy", yScale2(tonnes_year_landfill[9-index].Tonnes) ) //9 - index because years goes from 2006 - 2018 but the object goes 2018 - 2006
+				;
 				
+			d3.select(".mouse-per-line-landfill text")
+				.attr("x", xScale2(closest_year)+ margin2.left + 53 - adjust_x)
+				.attr("y", yScale2(tonnes_year_landfill[9-index].Tonnes) ) //9 - index because years goes from 2006 - 2018 but the object goes 2018 - 2006
+				.text("Tonnes:" + tonnes_year_landfill[9-index].Tonnes )
+			;
+			
+			d3.select(".mouse-per-line-recycling circle")
+				.attr("cx", xScale2(closest_year)+ margin2.left + 53)
+				.attr("cy", yScale2(tonnes_year_recycling[9-index].Tonnes) ) //9 - index because years goes from 2006 - 2018 but the object goes 2018 - 2006
+				;
+				
+			d3.select(".mouse-per-line-recycling text")
+				.attr("x", xScale2(closest_year)+ margin2.left + 53 - adjust_x)
+				.attr("y", yScale2(tonnes_year_recycling[9-index].Tonnes) ) //9 - index because years goes from 2006 - 2018 but the object goes 2018 - 2006
+				.text("Tonnes:" + tonnes_year_recycling[9-index].Tonnes )
+			;
+			d3.select(".mouse-per-line-energy circle")
+				.attr("cx", xScale2(closest_year)+ margin2.left + 53)
+				.attr("cy", yScale2(tonnes_year_energy[9-index].Tonnes) ) //9 - index because years goes from 2006 - 2018 but the object goes 2018 - 2006
+				;
+				
+			d3.select(".mouse-per-line-energy text")
+				.attr("x", xScale2(closest_year)+ margin2.left + 53 - adjust_x)
+				.attr("y", yScale2(tonnes_year_energy[9-index].Tonnes) ) //9 - index because years goes from 2006 - 2018 but the object goes 2018 - 2006
+				.text("Tonnes:" + tonnes_year_energy[9-index].Tonnes )
+			;
+			
+			
+		  });
 		
 }
 
