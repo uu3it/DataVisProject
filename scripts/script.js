@@ -259,7 +259,7 @@ function generate_graph1(dataset){
 						.projection(projection_act)
 	
 	//Pull in the australia map geopath data file 
-	d3.json("data/australia_map.json").then(function(json_aus) {
+	d3.json("data/australia_map2.json").then(function(json_aus) {
 	
 
 			//Draw the Australia Map
@@ -1851,6 +1851,7 @@ function generate_graph3(dataset){
 		});
 	
 }
+
 
 
 
