@@ -6,7 +6,7 @@
       "id": 0,
       "properties": {
         "STATE_CODE": "NSW",
-        "STATE_NAME": "New Sout Wales"
+        "STATE_NAME": "New South Wales"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -20,7 +20,7 @@
       "type": "Feature",
       "id": 1,
       "properties": {
-        "STATE_CODE": "Vic",
+        "STATE_CODE": "VIC",
         "STATE_NAME": "Victoria"
       },
       "geometry": {
@@ -34,7 +34,7 @@
       "type": "Feature",
       "id": 2,
       "properties": {
-        "STATE_CODE": "Qld",
+        "STATE_CODE": "QLD",
         "STATE_NAME": "Queensland"
       },
       "geometry": {
@@ -76,7 +76,7 @@
       "type": "Feature",
       "id": 5,
       "properties": {
-        "STATE_CODE": "Tas",
+        "STATE_CODE": "TAS",
         "STATE_NAME": "Tasmania"
       },
       "geometry": {
