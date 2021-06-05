@@ -83,10 +83,10 @@
 			
 				<!-- Graph 1 - Header  -->
 				<div class="ui container" > 	
-					<h2 id="graph1_header" class="ui header"> 	
-						<div onclick="dimmer1()" class="ui red button"><i class="info circle icon"></i></div>
+					<h1 id="graph1_header" class="ui center aligned header"> 	
+						<button onclick="dimmer1()" class="ui icon green button"><i class="info icon"></i></button>
 						Graph 1 - Australia's Plastic Waste
-					</h2>
+					</h1>
 					
 					
 				
@@ -125,7 +125,8 @@
 
 							</div>
 							<i class="tooltip info circle icon">
-									<span class="tooltiptext">  C&D - Construction and Demolition Waste <br>  C&I - Commercial and Industrial Waste <br>  MSW - Municipal Solid waste from Households and Council Operations <br>  Total - mix of all three</span>
+									<span class="tooltiptext">  C&D - Construction and Demolition Waste <br>  C&I - Commercial and Industrial Waste <br>  
+									MSW - Municipal Solid waste from Households and Council Operations <br>  Total - Mix of all three</span>
 							</i>
 							
 						  </div>
@@ -161,7 +162,10 @@
 						<h3 class="ui inverted left aligned header">Australia GeoMap aims to demonstrate the amount of waste generated for each state of Australia from 2006 to 2018. 
 						A bar chart is also included on the mouse hover on each state to shows the difference between landfill and recycling. The Jurisdiction bar chart is used to 
 						compare the amount of waste between the states. Furthermore, the filter menu is included to help with information drill down on the year, plastic type, stream 
-						(origin of waste), and the fate of the waste. </h3>
+						(origin of waste), and the fate of the waste. 
+						<br><br>
+						Please note yearly data is for the financial year, and the years 2007, 2011 and 2012 were missing from the government database.
+						</h3>
 					</div>
 					
 				</div>
@@ -174,6 +178,7 @@
 					
 					$('#dimmer1').dimmer('show');
 					var elmnt = document.getElementById("graph1");
+					elmnt.scrollIntoView();
 					elmnt.scrollIntoView();
 					elmnt.scrollIntoView(); //Call the scrollIntoView function twice as seemed to have troubles after first click
 
@@ -198,7 +203,7 @@
 				
 				
 				<div class="ui container">
-					<h2 class="ui header"><div onclick="dimmer2()" class="ui red button"><i class="info circle icon"></i></div></h2>
+					<h1 class="ui center aligned header"><button onclick="dimmer2()" class="ui icon green button"><i class="info icon"></i></button>Graph 2 - Plastic Waste's Fate</h1>
 				</div>
 				
 				<div class="ui secondary icon menu">
@@ -210,9 +215,14 @@
 				<div id="dimmer2" class="ui dimmer">
 					<h1 class="ui inverted header">Plastic Waste by Fate Description</h1>
 					<div class="ui container">
-						<h3 class="ui inverted left aligned header">Plastic Fate line chart visualises the wide gap between plastics that end up in landfill versus plastics 
-						that are recycled. The hover functionality is included to shows the exact tonnage of waste in specific years. 
-						(included is extra information about energy that is recovered from the plastic)</h3>
+						<h3 class="ui inverted left aligned header">The Plastic Fate Line Chart demonstrates the wide gap between plastics that end up in landfill versus plastics 
+						that are recycled or converted to energy (from incinerating plastic). 
+						<br><br>
+						Notice that there is a break in the scale as Energy from waste facility was difficult to interpret on a continuous scale. 
+						The hover functionality is included to show the exact tonnage of the plastic waste's fate in specific years. 
+						<br><br>
+						Please note yearly data is for the financial year, and the years 2007, 2011 and 2012 were missing from the government database.
+						</h3>
 					</div>
 				</div>
 				<script>
@@ -221,6 +231,7 @@
 					
 					$('#dimmer2').dimmer('show');
 					var elmnt = document.getElementById("graph2");
+					elmnt.scrollIntoView();
 					elmnt.scrollIntoView();
 					elmnt.scrollIntoView(); //Call the scrollIntoView function twice as seemed to have troubles after first click
 
@@ -245,26 +256,38 @@
 				
 				<!-- Graph 3 - Header  -->
 				<div class="ui container" style="padding-top:2em">
-					<h2 class="ui center aligned header"><div onclick="dimmer3()" class="ui red button"><i class="info circle icon"></i></div>Graph 3 - Plastic Waste By Type (with Decomposition)</h2>
+					<h1 class="ui center aligned header"><button onclick="dimmer3()" class="ui icon green button"><i class="info icon"></i></button>Graph 3 - Plastic Waste By Type (with Decomposition) </h1>
 				</div>	
-						 
 					<div class="ui container">
-					   <i class="filter icon"></i>
-						Filter By Year:
-					
-						<div id="chart3_year" class="ui inline simple dropdown">
-						  <label class="text"></label>
-						  <i class="dropdown icon"></i>
+					 	<div class="ui grid">
+							<div class="four column row">
+								<div class="column">
+									<div class="ui compact raised segment">
+									   <i class="filter icon"></i>
+										Filter By Year:
+									
+										<div id="chart3_year" class="ui inline simple dropdown">
+										  <label class="text"></label>
+										  <i class="dropdown icon"></i>
+										</div>
+									</div>
+								</div>
+								<div class="right floated column">
+									
+									<button id="run_animation" class="ui primary right floated button">Run Animation</button>
+								</div>
+							</div>
 						</div>
-								
-							
-					
-						<button id="run_animation" class="ui primary right floated button">Run Animation</button>
 					</div>
+				
+					
+					
 					
 					<!-- Chart 3 Content Goes Here -->
 					<div class = "item" id="chart3"></div>
 					
+					
+
 					
 				<!-- Graph Description -->
 				
@@ -285,7 +308,10 @@
 							</ol>
 						Plastic Waste by Type bar chart is an extension of Plastic Propaganda, where it intends to demonstrate the amount of waste generated for each plastic type broken down by years. 
 						Moreover, the specific tonnage of waste and decomposition time are shown by hovering over each category of plastic. To exhibit the changes in consumption of each type of plastic 
-						over the years, an animation will be shown by clicking the ‘Run Animation’ button</h3>
+						over the years, an animation will be shown by clicking the ‘Run Animation’ button
+						<br><br>
+						Please note yearly data is for the financial year, and the years 2007, 2011 and 2012 were missing from the government database.
+						</h3>
 					</div>
 				</div>
 				<script>
@@ -294,6 +320,7 @@
 					
 					$('#dimmer3').dimmer('show');
 					var elmnt = document.getElementById("graph3");
+					elmnt.scrollIntoView();
 					elmnt.scrollIntoView();
 					elmnt.scrollIntoView(); //Call the scrollIntoView function twice as seemed to have troubles after first click
 

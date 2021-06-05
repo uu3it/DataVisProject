@@ -327,33 +327,26 @@ function generate_graph1(dataset){
 						
 						filter_tags.length = (filter_tags.length - 3);  				//These tags are added last so reducing the length by 3 will remove them all
 						
-						console.log("Filter Tags 3A");
-						console.log(filter_tags);
+
 						
 						filter_tags.push("Landfill");									//Add back the Landfill tag
 						
-						console.log("Filter Tags 3B");
-						console.log(filter_tags);
+
 						
 						landfill = get_value5(tonnes_by_state_year_type_stream_fate);	//Get the value associated with this combination of tags (Landfill)
 						
-						console.log("landfill");
-						console.log(landfill);
+
 						
 						filter_tags.length = (filter_tags.length - 1);					//Remove the Landfill tag
 						
-						console.log("Filter Tags 3C");
-						console.log(filter_tags);
-						
+
 						filter_tags.push("Recycling");									//Add in the recycling tag
 						
-						console.log("Filter Tags 3D");
-						console.log(filter_tags);
+
 						
 						recycling =  get_value5(tonnes_by_state_year_type_stream_fate); //Get the value associated with this combination of tags (Recycling)
 						
-						console.log("Recycling");
-						console.log(recycling);
+
 						
 						
 					}else if(filter_variables.fate == 'Landfill'){
@@ -397,7 +390,7 @@ function generate_graph1(dataset){
 									; // 5% padding of the
 									
 					var xScale_Ordinal = d3.scaleBand()
-									.domain(["Landfill","Recycling"])
+									.domain(["Landfill (" + ((landfill/(landfill+recycling))*100).toFixed(0) + "%)" ,"Recycling (" + ((recycling/(landfill+recycling))*100).toFixed(0) + "%)"  ])
 									.rangeRound([0,width1]) //<-- enables rounding
 									.paddingInner(0.20) // 5% padding of the
 									.paddingOuter(0.20); // 5% padding of the
@@ -410,7 +403,7 @@ function generate_graph1(dataset){
 									
 									
 					var xAxis = d3.axisBottom()
-								.ticks(5)
+								.ticks(2)
 								.scale(xScale_Ordinal);
 								
 					var margin_top = 100;
@@ -420,7 +413,9 @@ function generate_graph1(dataset){
 					svg1.append("g")
 						.attr("class","axis")
 						.attr("transform", "translate(" + margin_right + ", "+ (height1 + margin_top) + ")")
-						.call(xAxis);
+						.call(xAxis)
+						.style("font-size", "14px")
+						;
 						
 								
 					var yAxis = d3.axisLeft()
@@ -432,7 +427,9 @@ function generate_graph1(dataset){
 					svg1.append("g")
 						.attr("class", "axis")
 						.attr("transform","translate(" + margin_right + ","+ margin_top +")")
-						.call(yAxis);
+						.call(yAxis)
+						.style("font-size", "12px")
+						;
 				
 					svg1.selectAll(".bar")
 						.data(landfill_recycling)
@@ -452,9 +449,26 @@ function generate_graph1(dataset){
 						.attr("fill","slategrey");
 						
 		
-
+					svg1.selectAll("#landfill_recycling1")
+						.data(landfill_recycling)
+						.enter()
+						.append("text")
+						.attr("id","landfill_recycling1")
+						.attr("x", function(d,i){
+							return margin_right + xScale(i) + xScale.bandwidth()/2;
+						})
+						.attr("y",function(d){
+							return margin_top + yScale(d);
+						}) 
+						.attr("font-family","sans-serif")
+						.attr("font-size","15px")
+						.attr("text-anchor", "middle")  //<!-- VERY IMPORTANT FOR ALLIGNMENT --!>
+						.attr("fill","black")
+						.text(function(d){
+							return d.toLocaleString('en')
+						});
 								
-					//Second Line - Landfill
+					//Second Line - Total Plastic Waste
 					svg1.append("text")
 						.attr("id","tooltip2")
 						.attr("x",function(){
@@ -519,6 +533,7 @@ function generate_graph1(dataset){
 					//Remove Rectangles and axis
 					d3.selectAll(".bar").remove();
 					d3.selectAll(".axis").remove();
+					d3.selectAll("#landfill_recycling1").remove();
 					
 					
 				});
@@ -1001,7 +1016,7 @@ function get_value5(objects){
 
 function generate_graph2(dataset){
 		const w = 1200;
-		const h = 750;
+		const h = 720;
 
 	
 		const margin2 = { left: 100, top: 100, right: 140, bottom: 30 } //Margin for the svg
@@ -1214,15 +1229,15 @@ function generate_graph2(dataset){
 			
 		
 		//create a heading for the graph
-		svg2.append("text")
-			.attr("x", (w / 2))             
-			.attr("y", 0 + (margin2.top/4))
-			.attr("class","heading")
-			.attr("text-anchor", "middle")  
-			.style("font-size", "30px") 
-			.style("text-decoration", "underline")  
-			.style("font-weight", "bold")  
-			.text("Graph 2 - Plastic Waste Fate");	
+		// svg2.append("text")
+			// .attr("x", (w / 2))             
+			// .attr("y", 0 + (margin2.top/4))
+			// .attr("class","heading")
+			// .attr("text-anchor", "middle")  
+			// .style("font-size", "30px") 
+			// .style("text-decoration", "underline")  
+			// .style("font-weight", "bold")  
+			// .text("Graph 2 - Plastic Waste Fate");	
 			
 		//Create a legend for the graph
 		svg2.append("circle").attr("cx",900).attr("cy",40).attr("r", 6).style("fill", "#8da0cb")
@@ -1428,12 +1443,13 @@ function generate_graph2(dataset){
 function generate_graph3(dataset){
 	
 	const w = 1550;
-	const h = 690;
+	const h = 670;
 
 
-	const margin3 = { left: 80, top: 20, right: 150, bottom: 50 } //Margin for the svg
+	const margin3 = { left: 80, top: 20, right: 150, bottom: 45 } //Margin for the svg
 	
 	var svg3 = d3.select("#chart3")
+			.attr("id","svg3")
 			.append("svg")
 			.attr("width", w + margin3.left + margin3.right)
 			.attr("height",h + margin3.top + margin3.bottom)
@@ -1539,13 +1555,13 @@ function generate_graph3(dataset){
 		  
 		  ;
 		  
-	var plastic_description = ["HDPE Decomposes in Just Under 100 Years",
-							  "LDPE Decomposes in 500-1000 Years (if exposed to UV light, indefinite otherwise)",
+	var plastic_description = ["HDPE Decomposes in Just Under 100 Years\nTypical HDPE items: bleach bottles and milk cartons",
+							  "LDPE Decomposes in 500-1000 Years (if exposed to UV light, indefinite otherwise)\nTypical LDPE items: grocery bags",
 							  "Other Plastics Deomposition Time is Indefinite",
-							  "PET Decomposes in 5-10 years",
-							  "PP Decomposition Time is a Millena",
-							  "PS Decomposes in 50 Years (less time with more exposure to sunlight",
-							  "PVC Decomposition Time is Indefinite (toxins released when degrades)"];
+							  "PET Decomposes in 5-10 years\nTypical PET items: water bottles and potatoe chip bags",
+							  "PP Decomposition Time is a Millena\nTypical PP items: rope and clothing",
+							  "PS Decomposes in 50 Years (less time with more exposure to sunlight\nTypical PS items: styrofoam cups and packing peanuts",
+							  "PVC Decomposition Time is Indefinite (toxins released when degrades)\nTypical PVC items: childrens toys and pipes"];
 							  
 	
 	
@@ -1564,7 +1580,6 @@ function generate_graph3(dataset){
 		.attr("transform","translate(" + margin3.left + ","+ 0 +")")
 		.call(yAxis3)
 		.style("font-size", "15px")
-		
 		;
 	
 	//Generate Label for yAxis
@@ -1581,9 +1596,25 @@ function generate_graph3(dataset){
 
 
 
-		
-	var colour_scale3 = ["red","orange","yellow","green","blue","indigo","violet"];
-		
+	//Colour Scale is based on decomposition time	
+	var colour_scale3 = ["#fa9fb5","#f768a1","#7a0177","#feebe2","#c51b8a","#fcc5c0","#7a0177"];
+	
+	//Create a legend for the graph
+	svg3.append('rect').attr('x', 1175).attr('y', 80).attr('width', 20).attr('height', 20).attr('stroke', 'black').attr('fill', '#feebe2');
+	svg3.append('rect').attr('x', 1175).attr('y', 100).attr('width', 20).attr('height', 20).attr('stroke', 'black').attr('fill', '#fcc5c0');
+	svg3.append('rect').attr('x', 1175).attr('y', 120).attr('width', 20).attr('height', 20).attr('stroke', 'black').attr('fill', '#fa9fb5');
+	svg3.append('rect').attr('x', 1175).attr('y', 140).attr('width', 20).attr('height', 20).attr('stroke', 'black').attr('fill', '#f768a1');
+	svg3.append('rect').attr('x', 1175).attr('y', 160).attr('width', 20).attr('height', 20).attr('stroke', 'black').attr('fill', '#c51b8a');
+	svg3.append('rect').attr('x', 1175).attr('y', 180).attr('width', 20).attr('height', 20).attr('stroke', 'black').attr('fill', '#7a0177');
+	svg3.append("text").attr("x", 1197).attr("y", 90).text("5-10 years").style("font-size", "15px").attr("alignment-baseline","middle");
+	svg3.append("text").attr("x", 1197).attr("y", 110).text("50 years").style("font-size", "15px").attr("alignment-baseline","middle");
+	svg3.append("text").attr("x", 1197).attr("y", 130).text("100 years").style("font-size", "15px").attr("alignment-baseline","middle");
+	svg3.append("text").attr("x", 1197).attr("y", 150).text("500-1000 years").style("font-size", "15px").attr("alignment-baseline","middle");
+	svg3.append("text").attr("x", 1197).attr("y", 170).text("1000 years").style("font-size", "15px").attr("alignment-baseline","middle");
+	svg3.append("text").attr("x", 1197).attr("y", 190).text("indefinite").style("font-size", "15px").attr("alignment-baseline","middle");
+	svg3.append("text").attr("x", 1175).attr("y", 55).text("Decomposition Time").style("font-size", "20px").attr("alignment-baseline","middle").style("font-weight",1000);
+	svg3.append("rect").attr("x",1165).attr("y",65).attr("height", 140).attr("width", 210).style("fill", "none").style("stroke", "black");
+	
 	//Function that takes in the dataset and returns an object with the year and value 
 	function get_type_tonnage_by_year(tonnes_by_year_type_object, type_tag){
 		
@@ -1662,13 +1693,17 @@ function generate_graph3(dataset){
 	console.log("types_object");
 	console.log(types_object);
 	console.log(Object.values(types_object) );
+	
 			
 	function draw_rectangles(data){
 			
-		svg3.selectAll("rect")
+		svg3.selectAll(".bar3")
 			.data(data)
 			.enter()
 			.append("rect")
+			.attr("class","bar3")
+			.attr('stroke', 'black')
+			.attr("stroke-width","2px")
 			.attr("x",function(d,i){
 				return xScale3(i) + margin3.left;
 			})
@@ -1684,6 +1719,7 @@ function generate_graph3(dataset){
 			.attr("fill",function(d,i){
 				return colour_scale3[i];
 			})
+
 			.on("mouseover", function(d,i){
 				
 				var xPosition = parseFloat(d3.select(this).attr("x"));
@@ -1696,26 +1732,31 @@ function generate_graph3(dataset){
 					.attr("font-family","sans-serif")
 					.attr("font-size","20px")
 					.attr("text-anchor", "middle")  //<!-- VERY IMPORTANT FOR ALLIGNMENT --!>
-					.attr("y",yPosition)
-					.attr("fill","black")
-					.text(d.value);
+					.attr("y",yPosition - 2)   //take away 2 since increased the stroke width of the rectangle
+					.attr("fill","blue")
+					.text(d.value.toLocaleString('en'));
+
+									
+				d3.select(this)
+					.attr("stroke","blue")
+					//.attr("stroke-width","3px")
+					.append("svg:title")
+					.text(function(d,i){
+						return plastic_description[i];
+					})
 					
-				svg3.append("text")
-					.attr("id","waste_description")
-					.attr("x",w/2)
-					.attr("font-family","sans-serif")
-					.attr("font-size","18px")
-					.attr("text-anchor", "middle")  //<!-- VERY IMPORTANT FOR ALLIGNMENT --!>
-					.attr("y", 0 + h/4)
-					.attr("fill","black")
-					.text(plastic_description[i]);
+				
+
 				
 				
 			})
 			.on("mouseout", function(){
 				svg3.select("#waste_value").remove();
-				svg3.select("#waste_description").remove();
-			});
+				d3.select(this).attr("stroke","black").attr("stroke-width","2px");
+			})
+			
+			
+		
 			
 		//create a heading for the graph	
 		svg3.append("text")
@@ -1744,7 +1785,7 @@ function generate_graph3(dataset){
 		
 		
 		
-		svg3.selectAll("rect")
+		svg3.selectAll(".bar3")
 			.data(data)
 			.transition()
 			.duration(duration)
